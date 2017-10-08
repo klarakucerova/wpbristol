@@ -1,0 +1,44 @@
+
+.meetup-list {
+    font-weight: 400;
+
+    li {
+        @include rem(margin, $vertical-spacing-unit 0);
+        align-items: flex-start;
+        display: flex;
+    }
+}
+
+.meetup-date {
+    @include rem(font-size, 25px);
+    @include rem(margin, 4px $vertical-spacing-unit 0 0);
+    @include rem(padding, 5px 15px);
+    background-color: $white;
+    font-family: $header-font;
+    line-height: 1;
+    text-transform: uppercase;
+    position: relative;
+
+    span {
+        @include rem(font-size, 16px);
+        display: block;
+    }
+
+    &:after {
+        @include rem(top, 6px);
+        @include rem(right, -18px);
+        border-color: transparent transparent transparent $white;
+        border-style: solid;
+        border-width: 9px;
+        content: '';
+        display: block;
+        height: 0;
+        position: absolute;
+        width: 0;
+    }
+}
+
+.meetup-link {
+    color: $dark-blue;
+    font-weight: 400;
+}

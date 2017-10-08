@@ -1,0 +1,83 @@
+
+.talk-wrapper {
+
+}
+
+.talk-list {
+    @include rem(max-width, 760px);
+    margin: 0 auto;
+
+    li {
+        @include rem(margin-bottom, ($vertical-spacing-unit * 2));
+        display: flex;
+
+        &:first-child {
+            .talk-info {
+                border-color: $turquoise;
+                border-width: 2px 2px 2px 0;
+            }
+        }
+    }
+}
+
+.talk-info {
+    @include rem(padding, $vertical-spacing-unit $vertical-spacing-unit $vertical-spacing-unit 30px);
+    border-style: solid;
+    border-color: $light-grey;
+    border-width: 1px 1px 1px 0;
+    position: relative;
+
+    &:before {
+        @include rem(top, 24px);
+        @include rem(left, -24px);
+        border-color: transparent $white transparent transparent;
+        border-style: solid;
+        border-width: 12px;
+        content: '';
+        display: block;
+        height: 0;
+        position: absolute;
+        width: 0;
+    }
+}
+
+.talk-header {
+    align-items: flex-start;
+    display: flex;
+}
+
+.talk-date {
+    @include rem(font-size, 38px);
+    @include rem(padding-right, 15px);
+    color: $turquoise;
+    display: inline-block;
+    font-family: $header-font;
+    line-height: 1;
+    text-transform: uppercase;
+    position: relative;
+
+    span {
+        @include rem(font-size, 24px);
+        display: block;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        border-right: 2px solid $turquoise;
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.talk-title {
+    @include rem(padding-left, 10px);
+    display: inline-block;
+    line-height: 1.1;
+
+    h4 {
+        margin: 0;
+    }
+}

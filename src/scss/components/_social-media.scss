@@ -1,0 +1,38 @@
+
+.social-media {
+    @include rem(margin-top, ($vertical-spacing-unit / 2));
+    align-items: center;
+    display: flex;
+    flex-basis: 70%;
+    justify-content: center;
+
+    li {
+        @include rem(font-size, 30px);
+        @include rem(margin-right, 12px);
+        background-color: $grey;
+        height: 1em;
+        width: 1em;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .icon-meetup {
+        @include rem(width, 65px);
+        background-color: transparent;
+    }
+
+    a {
+        display: flex;
+    }
+
+    @include breakpoint('small') {
+        align-self: flex-end;
+        justify-content: flex-end;
+    }
+}

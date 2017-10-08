@@ -10,6 +10,7 @@
 @import 'utils/mixins/before-ie-9';
 @import 'utils/mixins/breakpoint';
 @import 'utils/mixins/rem';
+@import 'utils/mixins/clearfix';
 
 // Placeholders
 // ------------------------------------------------
@@ -48,6 +49,12 @@
 @import 'components/buttons';
 @import 'components/icons';
 @import 'components/navigation';
+@import 'components/hamburger';
+@import 'components/social-media';
+@import 'components/post-meta';
+@import 'components/getinvolved';
+@import 'components/meetup';
+@import 'components/talk';
 
 // Global state classes
 // ------------------------------------------------

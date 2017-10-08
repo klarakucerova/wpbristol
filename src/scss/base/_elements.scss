@@ -6,9 +6,14 @@
 
 html,
 body {
+    color: $black;
+    font-family: $base-font;
+    font-size: $base-font-size;
+    font-weight: 300;
+    line-height: 1.4;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 audio,
@@ -41,7 +46,6 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -51,8 +55,34 @@ h6 {
     margin: $heading-spacing-unit;
 }
 
+h2,
+h3,
+h4 {
+    color: $dark-blue;
+    font-family: $header-font;
+    text-transform: uppercase;
+}
+
+h2,
+h3 {
+    @include rem(padding-left, $vertical-spacing-unit);
+    line-height: 1.1;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        border-left: 4px solid $turquoise;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+}
+
 h1 {
     @include rem(font-size, map-get($typography, 'heading-one'));
+    font-weight: 700;
 }
 
 h2 {
@@ -69,6 +99,8 @@ h4 {
 
 h5 {
     @include rem(font-size, map-get($typography, 'heading-five'));
+    color: $turquoise;
+    font-family: $header-font;
 }
 
 h6 {
@@ -76,6 +108,8 @@ h6 {
 }
 
 a {
+    color: $turquoise;
+    font-weight: 600;
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
 
@@ -148,13 +182,9 @@ button {
     }
 }
 
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
+ul,
 ol {
+    list-style: none;
     margin: 0;
     padding: 0;
 }

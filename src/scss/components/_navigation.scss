@@ -1,0 +1,28 @@
+
+.nav-wrapper {
+    padding: 0 4%;
+}
+
+.navigation {
+    @include rem(font-size, 14px);
+    @include rem(margin, ($vertical-spacing-unit / 2) 0);
+    text-transform: uppercase;
+
+    a {
+        color: $dark-blue;
+    } 
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+        @include rem(margin-right, 20px);
+        display: inline-block;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

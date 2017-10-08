@@ -1,0 +1,46 @@
+
+.header-wrapper {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+}
+
+.header-branding {
+    @include rem(padding, 0 $vertical-spacing-unit);
+    background-color: rgba($turquoise, 0.7);
+    bottom: -10%;
+    color: $white;
+    left: 7%;
+    position: absolute;
+    top: 0;
+
+    align-items: flex-end;
+    display: flex;
+
+    a {
+        color: $white;
+    }
+}
+
+.header-branding-inner {
+    margin-bottom: 15%;
+}
+
+.site-header {
+    @include clearfix();
+}
+
+.site-title {
+    margin: 0;
+
+    a {
+        font-weight: 700;
+    }
+}
+
+.site-description {
+    font-weight: 400;
+}

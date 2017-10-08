@@ -1,0 +1,151 @@
+
+.getinvolved-wrapper {
+    @include rem(margin, 30px 0 50px);
+    padding: 4%;
+    border: 1px solid $light-grey;
+
+    @include breakpoint('medium') {
+        @include rem(padding, ($vertical-spacing-unit * 2));
+    }
+}
+
+.getinvolved-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+        @include rem(margin, 25px 0);
+        display: flex;
+        align-items: flex-start;
+
+        &:last-child {
+            flex-basis: 100%;
+        }
+
+        // This is hack that needs to be removed when fixing the DB
+        &:first-child {
+            display: none;
+        }
+
+        @include breakpoint('medium') {
+            flex-basis: 47%;
+        }
+    }
+
+    h5 {
+        @include rem(margin, 5px 0);
+        line-height: 1;
+    }
+}
+
+.getinvolved-email {
+    @include rem(padding, ($vertical-spacing-unit / 4) $vertical-spacing-unit);
+    @include rem(max-width, 300px);
+    @include rem(margin, 30px auto);
+    align-items: center;
+    border: 2px solid $turquoise;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+
+    &:after {
+        @include rem(font-size, 30px);
+        @include rem(margin-left, ($vertical-spacing-unit / 2));
+        background: url(images/icons/email-us.svg) no-repeat center center;
+        content: '';
+        display: inline-block;
+        height: 1em;
+        width: 1em;
+    }
+}
+
+.icon-involved {
+    @include rem(margin-right, $vertical-spacing-unit);
+    position: relative;
+
+    &:before,
+    &:after {
+        @include rem(font-size, 60px);
+        content: '';
+        display: inline-block;
+        height: 1em;
+        width: 1em;
+    }
+
+    &:before {
+        background-color: rgba($turquoise, 0.2);
+        border-radius: 50%;
+    }
+
+    &:after {
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.attend {
+    &:after {
+        background-image: url(images/icons/attend.svg);
+        background-size: 45%;
+    }
+}
+
+.talk {
+    &:after {
+        background-image: url(images/icons/talk.svg);
+        background-size: 33%;
+    }
+}
+
+.teach {
+    &:after {
+        background-image: url(images/icons/teach.svg);
+        background-size: 45%;
+    }
+}
+
+.help {
+    &:after {
+        background-image: url(images/icons/help.svg);
+        background-size: 50%;
+    }
+}
+
+.collaborate {
+    &:after {
+        background-image: url(images/icons/collaborate.svg);
+        background-size: 60%;
+    }
+}
+
+.get_connected_online {
+    &:after {
+        background-image: url(images/icons/get_connected_online.svg);
+        background-size: 45%;
+    }
+}
+
+.write {
+    &:after {
+        background-image: url(images/icons/write.svg);
+        background-size: 45%;
+    }
+}
+
+.record {
+    &:after {
+        background-image: url(images/icons/record.svg);
+        background-size: 45%;
+    }
+}
+
+.offer {
+    &:after {
+        background-image: url(images/icons/offer.svg);
+        background-size: 52%;
+    }
+}

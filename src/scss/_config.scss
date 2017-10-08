@@ -15,22 +15,28 @@ $max-width: 1200px;
 
 // Colour palette
 // ------------------------------------------------
-$brand-color: (
-    'white': #fff
-);
+$white: #fff;
+$black: #333;
+$dark-blue: #0d3047;
+$turquoise: #007f7e;
+$grey: #adadad;
+$light-grey: #f6f6f6;
+
 
 // Main Typographic Heading sizes
 // ------------------------------------------------
 $typography: (
     'base-font-size': 16px,
-    'heading-one': 90px,
-    'heading-two': 72px,
-    'heading-three': 60px,
-    'heading-four': 48px,
-    'heading-five': 36px,
-    'heading-six': 24px
+    'heading-one': 24px,
+    'heading-two': 36px,
+    'heading-three': 28px,
+    'heading-four': 26px,
+    'heading-five': 28px,
+    'heading-six': 18px
 );
 
+$base-font: 'Open Sans', sans-serif;
+$header-font: 'Ubuntu Condensed', sans-serif;
 $base-font-size: map-get($typography, 'base-font-size');
 
 // Common breakpoints

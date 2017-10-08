@@ -1,0 +1,12 @@
+
+.footer-wrapper {
+    @include rem(padding, ($vertical-spacing-unit * 2) 4%);
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include breakpoint('small') {
+        flex-direction: row;
+    }
+}

@@ -3,6 +3,57 @@
 // using the Bourbon neat framework
 //
 
+.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-content {
+    flex: 1;
+}
+
+.container {
+    @include rem(max-width, 1010px);
+    margin: 0 auto;
+    padding: 0 4%;
+
+}
+
+.entry-content {
+    p {
+        @include rem(padding-left, 24px);
+
+        @include breakpoint('small') {
+            @include rem(padding-left, 50px);
+        }
+    }
+}
+
+.container-home {
+    display: flex;
+    justify-content: space-between;
+
+    article {
+        flex-basis: 60%;
+    }
+
+    aside {
+        @include rem(margin, ($vertical-spacing-unit * 2) 0);
+        flex-basis: 36%;
+    }
+}
+
+.sidebar {
+    @include rem(padding, $vertical-spacing-unit);
+    background-color: $light-grey;
+}
+
+.entry-content {
+    @include clearfix();
+    @include rem(margin-top, $vertical-spacing-unit);
+}
+
 
 // Single column layout by default given that elements are block level
 // Change layout for breakpoints
