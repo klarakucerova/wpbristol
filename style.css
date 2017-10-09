@@ -665,7 +665,7 @@ em {
   justify-content: space-between;
 }
 
-.container-home article {
+.container-home section {
   -ms-flex-preferred-size: 60%;
   flex-basis: 60%;
 }
@@ -1216,7 +1216,7 @@ em {
   width: 0;
 }
 
-.meetup-link {
+.meetup-link a {
   color: #0d3047;
   font-weight: 400;
 }
@@ -1299,6 +1299,31 @@ em {
 
 .talk-title h4 {
   margin: 0;
+}
+
+.talk-title h4 a {
+  color: #0d3047;
+  font-weight: 400;
+}
+
+.next-meetup {
+  padding-left: 3.125rem;
+}
+
+.next-meetup-header {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.next-meetup-title {
+  font-size: 1.25rem;
+  color: #0d3047;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-weight: 400;
+}
+
+.next-meetup-place {
+  font-style: italic;
 }
 
 .hidden {

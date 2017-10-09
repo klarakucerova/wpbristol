@@ -39,6 +39,8 @@
 }
 
 .meetup-link {
-    color: $dark-blue;
-    font-weight: 400;
+    a {
+        color: $dark-blue;
+        font-weight: 400;
+    }
 }

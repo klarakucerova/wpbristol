@@ -8,47 +8,37 @@
  */
 
 ?>
+<img src="<?php bloginfo('template_url'); ?>/images/talk-1.png" alt="" class="talk-image">
+<div class="talk-info">
+    <div class="talk-header">
+        <span class="talk-date"><?php the_field('event_date'); ?></span>
+        <span class="talk-title">
+            <?php if ( is_singular() ) :
+               the_title( '<h4>', '</h4>' );
+            else :
+               the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
+            endif; ?>
+        </span>
+    </div>
+    <p class="talk-text">
+        <?php
+            the_content( sprintf(
+                wp_kses(
+                    /* translators: %s: Name of current post. Only visible to screen readers */
+                    __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'custom-theme' ),
+                    array(
+                        'span' => array(
+                            'class' => array(),
+                        ),
+                    )
+                ),
+                get_the_title()
+            ) );
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php custom_theme_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'custom-theme' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'custom-theme' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php custom_theme_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+            wp_link_pages( array(
+                'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'custom-theme' ),
+                'after'  => '</div>',
+            ) );
+        ?>
+    </p>
+</div>

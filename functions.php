@@ -151,3 +151,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// Customize Ream more link text
+function modify_read_more_link() {
+    return '<a class="more-link" href="' . get_permalink() . '">Read more</a>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );

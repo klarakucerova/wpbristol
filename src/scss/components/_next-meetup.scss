@@ -1,0 +1,20 @@
+
+.next-meetup {
+    @include rem(padding-left, 50px);
+}
+
+.next-meetup-header {
+    display: flex;
+
+}
+
+.next-meetup-title {
+    @include rem(font-size, 20px);
+    color: $dark-blue;
+    font-family: $header-font;
+    font-weight: 400;
+}
+
+.next-meetup-place {
+    font-style: italic;
+}
