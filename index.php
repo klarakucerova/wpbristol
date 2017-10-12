@@ -17,16 +17,20 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
             <div class="container">
-                <h2>Our Talks</h2>
-                <div class="talk-wrapper">
-                    <ul class="talk-list">
-                        <?php while ( have_posts() ) : the_post(); ?>
-                            <li>
-                                <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-                            </li>
-                        <?php endwhile; ?>
-                    </ul>
-                </div>
+                <article>
+                    <div class="entry-content">
+                        <h2>Our Talks</h2>
+                        <div class="talk-wrapper">
+                            <ul class="talk-list">
+                                <?php while ( have_posts() ) : the_post(); ?>
+                                    <li>
+                                        <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+                                    </li>
+                                <?php endwhile; ?>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
             </div>
         </main><!-- #main -->
     </div><!-- #primary -->

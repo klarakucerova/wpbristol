@@ -10,27 +10,37 @@
     li {
         @include rem(margin-bottom, ($vertical-spacing-unit * 2));
         display: flex;
+        flex-direction: column;
 
         &:first-child {
             .talk-info {
                 border-color: $turquoise;
-                border-width: 2px 2px 2px 0;
+                border-width: 0 2px 2px 2px;
+
+                @include breakpoint('small') {
+                    border-width: 2px 2px 2px 0;
+                }
             }
+        }
+
+        @include breakpoint('small') {
+            flex-direction: row;
         }
     }
 }
 
 .talk-info {
-    @include rem(padding, $vertical-spacing-unit $vertical-spacing-unit $vertical-spacing-unit 30px);
+    @include rem(padding, $vertical-spacing-unit);
     border-style: solid;
     border-color: $light-grey;
-    border-width: 1px 1px 1px 0;
+    border-width: 0 1px 1px 1px;
+    flex-basis: 60%;
     position: relative;
 
     &:before {
-        @include rem(top, 24px);
-        @include rem(left, -24px);
-        border-color: transparent $white transparent transparent;
+         @include rem(top, -24px);
+        @include rem(left, 37px);
+        border-color: transparent transparent $white transparent;
         border-style: solid;
         border-width: 12px;
         content: '';
@@ -38,6 +48,17 @@
         height: 0;
         position: absolute;
         width: 0;
+
+        @include breakpoint('small') {
+            @include rem(top, 24px);
+            @include rem(left, -24px);
+            border-color: transparent $white transparent transparent;
+        }
+    }
+
+    @include breakpoint('small') {
+        @include rem(padding, $vertical-spacing-unit $vertical-spacing-unit $vertical-spacing-unit 30px);
+        border-width: 1px 1px 1px 0;
     }
 }
 
@@ -84,5 +105,34 @@
             color: $dark-blue;
             font-weight: 400;
         }
+    }
+}
+
+.talk-image {
+    background-image: url(images/talk-placeholder.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    content: '';
+    display: inline-block;
+    flex: 1;
+}
+
+.talk-text {
+    p {
+        margin-bottom: 0;
+        padding-left: 0;
+
+        @include breakpoint('small') {
+            @include rem(padding-left, 50px);
+        }
+    }
+}
+
+.talk-image-inner {
+    padding-bottom: 50%;
+
+    @include breakpoint('small') {
+        padding-bottom: 0;
     }
 }

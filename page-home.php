@@ -33,14 +33,14 @@ get_header(); ?>
 
                         <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
                             <div class="next-meetup-header">
-                                <div class="next-meetup-date"><?php the_field('event_date'); ?></div>
+                                <div class="meetup-date next-meetup-date"><?php the_field('event_date'); ?></div>
                                 <div>
-                                    <a href="<?php the_field('event_link'); ?>" class="next-meetup-title"><?php the_title(); ?></a>
+                                    <a href="<?php the_permalink(); ?>" class="next-meetup-title"><?php the_title(); ?></a>
                                     <div class="next-meetup-place">at Famous Royal Navy Volunteer</div>
                                 </div>
                             </div>
-                            <div><?php the_content(); ?></div>
-
+                            <?php the_content(); ?>
+                            <a href="<?php the_field('event_link'); ?>" class="button next-meetup-link">Go to Meetup</a>
                         <?php endwhile; 
                         wp_reset_postdata(); ?>
                     </div>
@@ -48,7 +48,6 @@ get_header(); ?>
 
                 <aside class="sidebar">
                     <h3>Our Meet-ups</h3>
-
                     <?php if ( $wpb_all_query->have_posts() ) : ?>
                         <ul class="meetup-list">
                             <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
@@ -63,7 +62,21 @@ get_header(); ?>
                     <?php endif; ?>
                 </aside>
             </div>
-
+            <div class="sponsors">
+                <span class="sponsors-title">Proudly sponsored by</span>
+                <div class="sponsor-content">
+                    <div class="sponsor">
+                        <img class="sponsor-logo" src="<?php bloginfo('template_url'); ?>/images/34sp.svg" alt="34sp.com">
+                        <?php the_field('sponsor_one'); ?>
+                        <p>34SP provide excellent WordPress hosting and amazing support. On top of that our members receive a discount code which gives them three months of free hosting, which you can cancel at any time (no getting sucked into a twelve month contract if you don’t want). The code is WPBRUG.</p>
+                    </div>
+                    <div class="sponsor">
+                        <img class="sponsor-logo" src="<?php bloginfo('template_url'); ?>/images/developme.svg" alt="34sp.com">
+                        <?php the_field('sponsor_two'); ?>
+                        <p>DevelopMe are a Bristol based tech training company. They run a variety of training courses including a 12-week full-time developers bootcamp and day long courses covering topics like WordPress and design skills. Their next Intro to WordPress course is on Sat 25th November at the Paintworks.</p>
+                    </div>
+                </div>
+            </div>
         </main><!-- #main -->
     </div><!-- #primary -->
 

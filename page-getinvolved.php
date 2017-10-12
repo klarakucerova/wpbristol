@@ -39,7 +39,7 @@ get_header(); ?>
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
-                    <a href=""><div class="getinvolved-email"><span>Email Us</span></div></a>
+                    <a href=""><div class="button getinvolved-email"><span>Email Us</span></div></a>
                 </div>
             </div>
 

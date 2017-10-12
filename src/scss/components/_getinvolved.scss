@@ -40,23 +40,29 @@
 }
 
 .getinvolved-email {
-    @include rem(padding, ($vertical-spacing-unit / 4) $vertical-spacing-unit);
     @include rem(max-width, 300px);
     @include rem(margin, 30px auto);
     align-items: center;
-    border: 2px solid $turquoise;
     display: flex;
     justify-content: center;
     text-transform: uppercase;
+    transition: background .5s ease-in-out;
 
     &:after {
         @include rem(font-size, 30px);
         @include rem(margin-left, ($vertical-spacing-unit / 2));
         background: url(images/icons/email-us.svg) no-repeat center center;
+        background-size: 100%;
         content: '';
         display: inline-block;
         height: 1em;
         width: 1em;
+    }
+
+    &:hover {
+        &:after {
+            background-image: url(images/icons/email-us-white.svg);
+        }
     }
 }
 

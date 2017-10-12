@@ -1,12 +1,27 @@
 
 .footer-wrapper {
-    @include rem(padding, ($vertical-spacing-unit * 2) 4%);
+    @include rem(padding, $vertical-spacing-unit  4%);
     background-color: $light-grey;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    @include breakpoint('small') {
+    @include breakpoint('medium') {
+        align-items: flex-end;
         flex-direction: row;
     }
+}
+
+.proudly-powered {
+    @include rem(margin-bottom, ($vertical-spacing-unit / 2));
+    text-align: center;
+
+    @include breakpoint('medium') {
+        margin-bottom: 0;
+        text-align: left;
+    }
+}
+
+.footer-homepage {
+    background-color: $white;
 }

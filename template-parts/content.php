@@ -8,7 +8,20 @@
  */
 
 ?>
-<img src="<?php bloginfo('template_url'); ?>/images/talk-1.png" alt="" class="talk-image">
+<div class="talk-image talk-img-<?php global $post; echo $post->post_name; ?>">
+    <?php if (has_post_thumbnail( $post->ID ) ): ?>
+        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
+        <style>
+            .talk-img-<?php global $post; echo $post->post_name; ?> {
+                background-image: url('<?php echo $image[0]; ?>');
+            }
+        </style>
+        <div class="talk-image-inner"></div>
+    <?php else: ?>
+        <div class="talk-image-inner"></div>
+    <?php endif; ?>
+</div>
 <div class="talk-info">
     <div class="talk-header">
         <span class="talk-date"><?php the_field('event_date'); ?></span>
@@ -20,7 +33,7 @@
             endif; ?>
         </span>
     </div>
-    <p class="talk-text">
+    <div class="talk-text">
         <?php
             the_content( sprintf(
                 wp_kses(
@@ -40,5 +53,5 @@
                 'after'  => '</div>',
             ) );
         ?>
-    </p>
+    </div>
 </div>

@@ -1,0 +1,39 @@
+
+.sponsors {
+    @include rem(padding, ($vertical-spacing-unit * 2) 4%);
+    background-color: $light-grey;
+}
+
+.sponsors-title {
+    @include rem(margin-bottom, $vertical-spacing-unit);
+    display: inline-block;
+}
+
+.sponsor-content {
+    @include breakpoint('medium') {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.sponsor {
+    @include rem(margin-bottom, 30px);
+
+    p {
+        @include rem(margin, ($vertical-spacing-unit / 2) 0);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint('medium') {
+        flex-basis: 48%;
+        margin-bottom: 0;
+    }
+}
+
+.sponsor-logo {
+    @include rem(max-width, 140px);
+
+}

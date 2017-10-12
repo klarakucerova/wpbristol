@@ -1,11 +1,17 @@
 
 .next-meetup {
-    @include rem(padding-left, 50px);
+    @include clearfix();
+    @include rem(margin-bottom, ($vertical-spacing-unit * 2));
+    @include rem(padding-left, 24px);
+
+    @include breakpoint('small') {
+        @include rem(padding-left, 50px);
+    }
 }
 
 .next-meetup-header {
+    align-items: flex-start;
     display: flex;
-
 }
 
 .next-meetup-title {
@@ -13,8 +19,25 @@
     color: $dark-blue;
     font-family: $header-font;
     font-weight: 400;
+    line-height: 1.1;
 }
 
 .next-meetup-place {
     font-style: italic;
+}
+
+.next-meetup-date {
+    background-color: $light-grey;
+
+    &:after {
+        border-left-color: $light-grey;
+    }
+}
+
+.next-meetup-link {
+    width: 100%;
+
+    @include breakpoint('medium') {
+        @include rem(max-width, 300px);
+    }
 }

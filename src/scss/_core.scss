@@ -36,13 +36,7 @@
 
 // Pages
 // ------------------------------------------------
-@import 'pages/category';
-@import 'pages/product-listing';
-@import 'pages/product';
-@import 'pages/cart';
-@import 'pages/checkout';
-@import 'pages/search-results';
-@import 'pages/account';
+@import 'pages/home';
 
 // Components
 // ------------------------------------------------
@@ -56,6 +50,7 @@
 @import 'components/meetup';
 @import 'components/talk';
 @import 'components/next-meetup';
+@import 'components/sponsors';
 
 // Global state classes
 // ------------------------------------------------

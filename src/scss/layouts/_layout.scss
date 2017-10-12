@@ -15,9 +15,8 @@
 
 .container {
     @include rem(max-width, 1010px);
-    margin: 0 auto;
+    @include rem(margin, 33px auto 0);
     padding: 0 4%;
-
 }
 
 .entry-content {
@@ -30,28 +29,8 @@
     }
 }
 
-.container-home {
-    display: flex;
-    justify-content: space-between;
-
-    section {
-        flex-basis: 60%;
-    }
-
-    aside {
-        @include rem(margin, ($vertical-spacing-unit * 2) 0);
-        flex-basis: 36%;
-    }
-}
-
-.sidebar {
-    @include rem(padding, $vertical-spacing-unit);
-    background-color: $light-grey;
-}
-
 .entry-content {
     @include clearfix();
-    @include rem(margin-top, $vertical-spacing-unit);
 }
 
 

@@ -12,18 +12,12 @@
 ?>
 
     </div><!-- #content -->
-
-    <footer id="colophon" class="footer-wrapper" role="contentinfo">
-        <div class="site-info">
-            <div>
-                <div>Sponsored by</div>
-                <img src="<?php bloginfo('template_url'); ?>/images/34sp.svg" alt="34sp.com">
-            </div>
-            <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'custom-theme' ) ); ?>"><?php
-                /* translators: %s: CMS name, i.e. WordPress. */
-                printf( esc_html__( 'Proudly powered by %s', 'custom-theme' ), 'WordPress' );
-            ?></a>
-        </div><!-- .site-info -->
+    <footer id="colophon" class="footer-wrapper <?php if ( is_front_page() ) : ?>footer-homepage<?php endif; ?>" role="contentinfo">
+        <span class="proudly-powered">
+            <?php bloginfo( 'name' ); ?> | Powered by <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'custom-theme' ) ); ?>"><?php
+            /* translators: %s: CMS name, i.e. WordPress. */
+            printf( esc_html__( '%s', 'custom-theme' ), 'WordPress' ); ?></a>
+        </span>
         <ul class="social-media">
             <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/email.svg" alt="Email"></a></li>
             <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/facebook.svg" alt="Facebook"></a></li>

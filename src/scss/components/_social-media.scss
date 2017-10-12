@@ -3,7 +3,7 @@
     @include rem(margin-top, ($vertical-spacing-unit / 2));
     align-items: center;
     display: flex;
-    flex-basis: 70%;
+    flex-basis: 50%;
     justify-content: center;
 
     li {
@@ -16,23 +16,34 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: background-color .5s ease-in-out;
 
         &:last-child {
             margin-right: 0;
+        }
+
+        &:hover {
+            background-color: darken($grey, 20%);
         }
     }
 
     .icon-meetup {
         @include rem(width, 65px);
         background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+            fill: darken($grey, 20%);
+        }
     }
 
     a {
         display: flex;
     }
 
-    @include breakpoint('small') {
+    @include breakpoint('medium') {
         align-self: flex-end;
         justify-content: flex-end;
+        margin-top: 0;
     }
 }

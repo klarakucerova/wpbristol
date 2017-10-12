@@ -1,0 +1,24 @@
+
+.container-home {
+    margin-top: 0;
+
+    section {
+        @include rem(margin-top, 33px);
+        flex-basis: 60%;
+    }
+
+    aside {
+        @include rem(margin, ($vertical-spacing-unit * 2) 0);
+        flex-basis: 36%;
+    }
+
+    @include breakpoint('medium') {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.sidebar {
+    @include rem(padding, $vertical-spacing-unit);
+    background-color: $light-grey;
+}
