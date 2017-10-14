@@ -27,6 +27,14 @@
 
     <header id="masthead" class="site-header" role="banner">
         <div class="nav-wrapper">
+            <div class="nav-toggle-wrapper">
+                <div for="nav-toggle" class="nav-icon nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
             <nav id="site-navigation" class="navigation" role="navigation">
                 <?php
                     wp_nav_menu( array(
@@ -35,18 +43,11 @@
                     ) );
                 ?>
             </nav><!-- #site-navigation -->
-            <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-            <label for="nav-trigger" class="nav-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
         </div>
 
         <div class="header-wrapper">
             <picture>
-                <source srcset="<?php bloginfo('template_url'); ?>/images/header.png" media="(min-width: 770px)">
+                <source srcset="<?php bloginfo('template_url'); ?>/images/header@2x.png" media="(min-width: 770px)">
                 <img src="<?php bloginfo('template_url'); ?>/images/header.png" alt="Bristol WordPress people">
             </picture>
             <div class="header-branding">

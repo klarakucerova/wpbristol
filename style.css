@@ -489,17 +489,18 @@ h3 {
 }
 
 h4 {
-  font-size: 1.625rem;
+  font-size: 1.375rem;
 }
 
 h5 {
-  font-size: 1.75rem;
+  font-size: 1.375rem;
   color: #007f7e;
   font-family: "Ubuntu Condensed", sans-serif;
 }
 
 h6 {
   font-size: 1.125rem;
+  color: #0d3047;
 }
 
 a {
@@ -643,7 +644,7 @@ em {
 }
 
 .container {
-  max-width: 63.125rem;
+  max-width: 60rem;
   margin: 2.0625rem auto 0;
   padding: 0 4%;
 }
@@ -799,20 +800,29 @@ em {
 
 .header-branding {
   padding: 0 1.25rem;
+  max-width: 15.9375rem;
+  -ms-flex-align: end;
+  align-items: flex-end;
   background-color: rgba(0, 127, 126, 0.7);
-  bottom: -10%;
+  bottom: -7%;
   color: #fff;
+  display: -ms-flexbox;
+  display: flex;
   left: 7%;
   position: absolute;
   top: 0;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  display: -ms-flexbox;
-  display: flex;
+  right: 7%;
 }
 
 .header-branding a {
   color: #fff;
+}
+
+@media (min-width: 30rem) {
+  .header-branding {
+    max-width: none;
+    right: auto;
+  }
 }
 
 .header-branding-inner {
@@ -865,6 +875,7 @@ em {
 }
 
 .proudly-powered {
+  font-size: 0.875rem;
   margin-bottom: 0.625rem;
   text-align: center;
 }
@@ -881,6 +892,7 @@ em {
 }
 
 .container-home {
+  max-width: 63.125rem;
   margin-top: 0;
 }
 
@@ -924,33 +936,101 @@ em {
 }
 
 .nav-wrapper {
-  padding: 0 4%;
+  height: 3.125rem;
+}
+
+@media (min-width: 30rem) {
+  .nav-wrapper {
+    padding: 0.9375rem 4%;
+  }
+}
+
+.nav-toggle-wrapper {
+  top: 0.9375rem;
+  position: absolute;
+  right: 4%;
+}
+
+@media (min-width: 30rem) {
+  .nav-toggle-wrapper {
+    display: none;
+  }
 }
 
 .navigation {
   font-size: 0.875rem;
-  margin: 0.625rem 0;
+  background-color: #fff;
+  height: 100vh;
+  position: fixed;
+  left: -100%;
   text-transform: uppercase;
+  top: 0;
+  transition: left .5s ease-in-out;
+  width: 100%;
+  z-index: 10;
+}
+
+.navigation.is-opened {
+  left: 0;
 }
 
 .navigation a {
   color: #0d3047;
 }
 
+@media (min-width: 30rem) {
+  .navigation {
+    position: relative;
+    height: auto;
+    left: 0;
+  }
+}
+
 .menu {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  padding: 1.25rem 4%;
 }
 
-.menu li {
-  margin-right: 1.25rem;
-  display: inline-block;
+.menu .current-menu-item:before {
+  right: 0;
 }
 
-.menu li:last-child {
-  margin-right: 0;
+@media (min-width: 30rem) {
+  .menu {
+    padding: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+.menu-item {
+  margin: 1.25rem 0;
+  display: block;
+  position: relative;
+}
+
+@media (min-width: 30rem) {
+  .menu-item {
+    margin: 0 1.25rem 0 0;
+    display: inline-block;
+  }
+  .menu-item:last-child {
+    margin-right: 0;
+  }
+  .menu-item:before {
+    height: 0.1875rem;
+    bottom: -0.3125rem;
+    background: #007f7e;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 100%;
+    transition: right .4s ease-out;
+  }
+  .menu-item:hover:before, .menu-item:active:before {
+    right: 0;
+  }
 }
 
 .nav-icon {
@@ -959,12 +1039,7 @@ em {
   cursor: pointer;
   display: block;
   position: relative;
-}
-
-@media (min-width: 30rem) {
-  .nav-icon {
-    display: none;
-  }
+  z-index: 20;
 }
 
 .nav-icon span {
@@ -992,33 +1067,37 @@ em {
   top: 1.125rem;
 }
 
-.nav-trigger {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-}
-
-.nav-trigger:checked + .nav-icon span:nth-child(1) {
+.nav-icon.is-active span:nth-child(1) {
   top: 0.5625rem;
   left: 50%;
   width: 0%;
 }
 
-.nav-trigger:checked + .nav-icon span:nth-child(2) {
+.nav-icon.is-active span:nth-child(2) {
   transform: rotate(45deg);
 }
 
-.nav-trigger:checked + .nav-icon span:nth-child(3) {
+.nav-icon.is-active span:nth-child(3) {
   transform: rotate(-45deg);
 }
 
-.nav-trigger:checked + .nav-icon span:nth-child(4) {
+.nav-icon.is-active span:nth-child(4) {
   top: 0.625rem;
   left: 50%;
   width: 0%;
 }
 
+.social-media-wrapper {
+  margin: 0.625rem 0;
+}
+
+@media (min-width: 48.125rem) {
+  .social-media-wrapper {
+    margin: 0;
+  }
+}
+
 .social-media {
-  margin-top: 0.625rem;
   -ms-flex-align: center;
   align-items: center;
   display: -ms-flexbox;
@@ -1354,8 +1433,8 @@ em {
 }
 
 .talk-date {
-  font-size: 2.375rem;
-  padding-right: 0.9375rem;
+  font-size: 1.875rem;
+  padding-right: 0.625rem;
   color: #007f7e;
   display: inline-block;
   font-family: "Ubuntu Condensed", sans-serif;
@@ -1365,7 +1444,7 @@ em {
 }
 
 .talk-date span {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   display: block;
 }
 
@@ -1386,12 +1465,19 @@ em {
 }
 
 .talk-title h4 {
+  font-size: 1.25rem;
   margin: 0;
 }
 
 .talk-title h4 a {
   color: #0d3047;
   font-weight: 400;
+}
+
+@media (min-width: 30rem) {
+  .talk-title h4 {
+    font-size: 1.375rem;
+  }
 }
 
 .talk-image {
@@ -1525,6 +1611,39 @@ em {
 
 .sponsor-logo {
   max-width: 8.75rem;
+}
+
+.talk-post-title {
+  padding-left: 1.25rem;
+}
+
+.talk-post-content {
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.talk-post-content p {
+  padding: 0;
+}
+
+.talk-post-content p:first-child {
+  margin-top: 0;
+}
+
+.talk-post-date {
+  background-color: #f6f6f6;
+}
+
+.talk-post-date:after {
+  border-left-color: #f6f6f6;
+}
+
+.talk-post-button {
+  margin: 1.25rem 0;
+  max-width: 25rem;
+  width: 100%;
 }
 
 .hidden {

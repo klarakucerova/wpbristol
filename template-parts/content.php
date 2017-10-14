@@ -8,32 +8,25 @@
  */
 
 ?>
-<div class="talk-image talk-img-<?php global $post; echo $post->post_name; ?>">
-    <?php if (has_post_thumbnail( $post->ID ) ): ?>
-        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
-        <style>
-            .talk-img-<?php global $post; echo $post->post_name; ?> {
-                background-image: url('<?php echo $image[0]; ?>');
-            }
-        </style>
-        <div class="talk-image-inner"></div>
-    <?php else: ?>
-        <div class="talk-image-inner"></div>
-    <?php endif; ?>
-</div>
-<div class="talk-info">
-    <div class="talk-header">
-        <span class="talk-date"><?php the_field('event_date'); ?></span>
-        <span class="talk-title">
-            <?php if ( is_singular() ) :
-               the_title( '<h4>', '</h4>' );
-            else :
-               the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
-            endif; ?>
-        </span>
-    </div>
-    <div class="talk-text">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <header class="entry-header">
+        <?php
+        if ( is_singular() ) :
+            the_title( '<h1 class="entry-title">', '</h1>' );
+        else :
+            the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+        endif;
+
+        if ( 'post' === get_post_type() ) : ?>
+        <div class="entry-meta">
+            <?php custom_theme_posted_on(); ?>
+        </div><!-- .entry-meta -->
+        <?php
+        endif; ?>
+    </header><!-- .entry-header -->
+
+    <div class="entry-content">
         <?php
             the_content( sprintf(
                 wp_kses(
@@ -53,5 +46,9 @@
                 'after'  => '</div>',
             ) );
         ?>
-    </div>
-</div>
+    </div><!-- .entry-content -->
+
+    <footer class="entry-footer">
+        <?php custom_theme_entry_footer(); ?>
+    </footer><!-- .entry-footer -->
+</article><!-- #post-<?php the_ID(); ?> -->

@@ -1,6 +1,13 @@
 
+.social-media-wrapper {
+    @include rem(margin, ($vertical-spacing-unit / 2) 0);
+
+    @include breakpoint('medium') {
+        margin: 0;
+    }
+}
+
 .social-media {
-    @include rem(margin-top, ($vertical-spacing-unit / 2));
     align-items: center;
     display: flex;
     flex-basis: 50%;

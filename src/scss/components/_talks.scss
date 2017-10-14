@@ -68,8 +68,8 @@
 }
 
 .talk-date {
-    @include rem(font-size, 38px);
-    @include rem(padding-right, 15px);
+    @include rem(font-size, 30px);
+    @include rem(padding-right, ($vertical-spacing-unit / 2));
     color: $turquoise;
     display: inline-block;
     font-family: $header-font;
@@ -78,7 +78,7 @@
     position: relative;
 
     span {
-        @include rem(font-size, 24px);
+        @include rem(font-size, 18px);
         display: block;
     }
 
@@ -94,16 +94,21 @@
 }
 
 .talk-title {
-    @include rem(padding-left, 10px);
+    @include rem(padding-left, ($vertical-spacing-unit / 2));
     display: inline-block;
     line-height: 1.1;
 
     h4 {
+        @include rem(font-size, 20px);
         margin: 0;
 
         a {
             color: $dark-blue;
             font-weight: 400;
+        }
+
+        @include breakpoint('small') {
+            @include rem(font-size, map-get($typography, 'heading-four'));
         }
     }
 }

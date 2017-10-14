@@ -10,18 +10,24 @@
 
 .header-branding {
     @include rem(padding, 0 $vertical-spacing-unit);
+    @include rem(max-width, 255px);
+    align-items: flex-end;
     background-color: rgba($turquoise, 0.7);
-    bottom: -10%;
+    bottom: -7%;
     color: $white;
+    display: flex;
     left: 7%;
     position: absolute;
     top: 0;
-
-    align-items: flex-end;
-    display: flex;
+    right: 7%;
 
     a {
         color: $white;
+    }
+
+    @include breakpoint('small') {
+        max-width: none;
+        right: auto;
     }
 }
 

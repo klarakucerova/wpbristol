@@ -4,10 +4,7 @@
     cursor: pointer;
     display: block;
     position: relative;
-
-    @include breakpoint($small) {
-        display: none;
-    }
+    z-index: 20;
 }
 
 .nav-icon span {
@@ -35,29 +32,22 @@
     @include rem(top, 18px);
 }
 
-.nav-trigger{
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
+.nav-icon.is-active span:nth-child(1) {
+    @include rem(top, 9px);
+    left: 50%;
+    width: 0%;
 }
 
-.nav-trigger:checked {
-    +.nav-icon span:nth-child(1) {
-        @include rem(top, 9px);
-        left: 50%;
-        width: 0%;
-    }
+.nav-icon.is-active span:nth-child(2) {
+    transform: rotate(45deg);
+}
 
-    +.nav-icon span:nth-child(2) {
-        transform: rotate(45deg);
-    }
+.nav-icon.is-active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
 
-    +.nav-icon span:nth-child(3) {
-        transform: rotate(-45deg);
-    }
-
-    +.nav-icon span:nth-child(4) {
-        @include rem(top, 10px);
-        left: 50%;
-        width: 0%;
-    }
+.nav-icon.is-active span:nth-child(4) {
+    @include rem(top, 10px);
+    left: 50%;
+    width: 0%;
 }

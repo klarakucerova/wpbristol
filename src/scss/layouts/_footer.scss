@@ -13,6 +13,7 @@
 }
 
 .proudly-powered {
+    @include rem(font-size, 14px);
     @include rem(margin-bottom, ($vertical-spacing-unit / 2));
     text-align: center;
 

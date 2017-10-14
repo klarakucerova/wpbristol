@@ -18,14 +18,16 @@
             /* translators: %s: CMS name, i.e. WordPress. */
             printf( esc_html__( '%s', 'custom-theme' ), 'WordPress' ); ?></a>
         </span>
-        <ul class="social-media">
-            <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/email.svg" alt="Email"></a></li>
-            <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/facebook.svg" alt="Facebook"></a></li>
-            <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/twitter.svg" alt="Twitter"></a></li>
-            <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/instagram.svg" alt="Instagram"></a></li>
-            <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/youtube.svg" alt="You Tube"></a></li>
-            <li class="icon-meetup"><a href=""><img src="<?php bloginfo('template_url'); ?>/images/meetup.svg" alt="Meetup"></a></li>
-        </ul>
+        <div class="social-media-wrapper">
+            <ul class="social-media">
+                <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/email.svg" alt="Email"></a></li>
+                <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/facebook.svg" alt="Facebook"></a></li>
+                <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/twitter.svg" alt="Twitter"></a></li>
+                <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/instagram.svg" alt="Instagram"></a></li>
+                <li><a href=""><img src="<?php bloginfo('template_url'); ?>/images/youtube.svg" alt="You Tube"></a></li>
+                <li class="icon-meetup"><a href=""><img src="<?php bloginfo('template_url'); ?>/images/meetup.svg" alt="Meetup"></a></li>
+            </ul>
+        </div>
     </footer><!-- #colophon -->
 </div><!-- #page -->
 

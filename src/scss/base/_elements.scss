@@ -105,6 +105,7 @@ h5 {
 
 h6 {
     @include rem(font-size, map-get($typography, 'heading-six'));
+    color: $dark-blue;
 }
 
 a {
