@@ -23,11 +23,6 @@
             flex-basis: 100%;
         }
 
-        // This is hack that needs to be removed when fixing the DB
-        &:first-child {
-            display: none;
-        }
-
         @include breakpoint('medium') {
             flex-basis: 47%;
         }

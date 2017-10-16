@@ -1,32 +1,41 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package custom-theme
+/*
+ * Template Name: Featured Article
+ * Template Post Type: post, page, product
  */
 
-get_header(); ?>
+get_header();  ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
-        <div class="container">
-            <article>
-                <div class="entry-content">
-                    <?php
-                    while ( have_posts() ) : the_post();
+            <div class="container">
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <div class="entry-content">
+                        <?php while ( have_posts() ) : the_post(); ?>
 
-                        get_template_part( 'template-parts/content', get_post_format() );
+                            <h2 class="talk-post-title"><?php the_title(); ?></h2>
+                            <div class="talk-post-content">
+                                <div class="meetup-date talk-post-date"><?php the_field('event_date'); ?></div>
+                                <div>
+                                    <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                                        <div class="talk-post-image">
+                                            <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                                            <img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>">
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php the_content(); ?>
+                                    <a href="<?php the_field('event_link'); ?>" class="button talk-post-button">Go to Meetup</a>
+                                </div>
+                            </div>
+                            <?php the_post_navigation( array(
+                                'prev_text'                  => __( 'prev' ),
+                                'next_text'                  => __( 'next' )
+                            ) ); ?>
+                        <?php endwhile; ?> 
+                    </div><!-- .entry-content -->
 
-                        the_post_navigation();
-
-                    endwhile; // End of the loop.
-                    ?>
-                </div>
-            </article>
-            
-        </div>
+                </article><!-- #post-<?php the_ID(); ?> -->
+            </div>
 
         </main><!-- #main -->
     </div><!-- #primary -->

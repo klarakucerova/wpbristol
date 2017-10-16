@@ -11,33 +11,86 @@
  *
  * @package custom-theme
  */
+
 get_header(); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
+            
+            <div class="container">
+                <article>
+                    <div class="entry-content">
+                        <?php while ( have_posts() ) : the_post(); ?>
 
-        <?php
-        if ( have_posts() ) :
-            if ( is_home() && ! is_front_page() ) : ?>
-                <header>
-                    <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-                </header>
+                            <?php the_content(); ?>
 
-            <?php
-            endif;
-            /* Start the Loop */
-            while ( have_posts() ) : the_post();
-                /*
-                 * Include the Post-Format-specific template for the content.
-                 * If you want to override this in a child theme, then include a file
-                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                 */
-                get_template_part( 'template-parts/content', get_post_format() );
-            endwhile;
-            the_posts_navigation();
-        else :
-            get_template_part( 'template-parts/content', 'none' );
-        endif; ?>
+                        <?php endwhile; ?>
+                        <?php wp_reset_query(); ?>
+                        
+                        <?php $args = array(
+                            'post_type'      => 'post',
+                            'post_status'    => 'publish',
+                            'posts_per_page' => 10
+                            );
+                         
+                        $talks = new WP_Query( $args ); ?>
+                        
+                        <?php if( $talks->have_posts() ): ?>
+                            <div class="talk-wrapper">
+                            <ul class="talk-list">
+                                <?php while ( $talks->have_posts() ) : $talks->the_post(); ?>
+                                    <li>
+                                        <div class="talk-image talk-img-<?php global $post; echo $post->post_name; ?>">
+                                            <?php if (has_post_thumbnail( $post->ID ) ): ?>
+                                                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
+                                                <style>
+                                                    .talk-img-<?php global $post; echo $post->post_name; ?> {
+                                                        background-image: url('<?php echo $image[0]; ?>');
+                                                    }
+                                                </style>
+                                                <div class="talk-image-inner"></div>
+                                            <?php else: ?>
+                                                <div class="talk-image-inner"></div>
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="talk-info">
+                                            <div class="talk-header">
+                                                <span class="talk-date"><?php the_field('event_date'); ?></span>
+                                                <span class="talk-title">
+                                                    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                                                </span>
+                                            </div>
+                                            <div class="talk-text">
+                                                <?php
+                                                    the_content( sprintf(
+                                                        wp_kses(
+                                                            /* translators: %s: Name of current post. Only visible to screen readers */
+                                                            __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'custom-theme' ),
+                                                            array(
+                                                                'span' => array(
+                                                                    'class' => array(),
+                                                                ),
+                                                            )
+                                                        ),
+                                                        get_the_title()
+                                                    ) );
+
+                                                    wp_link_pages( array(
+                                                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'custom-theme' ),
+                                                        'after'  => '</div>',
+                                                    ) );
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </li>
+                                <?php endwhile; ?>
+                            </ul>
+                            </div>
+                        <?php endif; ?>
+                        <?php wp_reset_postdata(); ?>
+                       
+            <?php the_posts_navigation(); ?>
 
         </main><!-- #main -->
     </div><!-- #primary -->

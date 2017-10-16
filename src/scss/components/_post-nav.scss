@@ -1,0 +1,6 @@
+.nav-links {
+    @include rem(margin, $vertical-spacing-unit 0);
+    @include rem(padding-left, 70px);
+    display: flex;
+    justify-content: space-between;
+}

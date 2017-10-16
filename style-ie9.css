@@ -659,6 +659,10 @@ em {
   }
 }
 
+.entry-content h2:not(:first-child) {
+  margin-top: 2.5rem;
+}
+
 .entry-content {
   *zoom: 1;
 }
@@ -1191,10 +1195,6 @@ em {
   flex-basis: 100%;
 }
 
-.getinvolved-list li:first-child {
-  display: none;
-}
-
 @media (min-width: 48.125rem) {
   .getinvolved-list li {
     -ms-flex-preferred-size: 47%;
@@ -1644,6 +1644,24 @@ em {
   margin: 1.25rem 0;
   max-width: 25rem;
   width: 100%;
+}
+
+.talk-post-image {
+  margin: 0 0 1.25rem 1.875rem;
+  float: right;
+}
+
+.talk-post-image ~ p {
+  margin-top: 0;
+}
+
+.nav-links {
+  margin: 1.25rem 0;
+  padding-left: 4.375rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .hidden {

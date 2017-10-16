@@ -31,7 +31,7 @@ get_header(); ?>
                         <?php $args = array(
                             'post_type'      => 'post',
                             'post_status'    => 'publish',
-                            'posts_per_page' => -1
+                            'posts_per_page' => 5
                             );
                          
                         $talks = new WP_Query( $args ); ?>
@@ -86,8 +86,11 @@ get_header(); ?>
                                         </div>
                                     </li>
                                 <?php endwhile; ?>
-                                <?php previous_posts_link(); ?>
-                                <?php next_posts_link(); ?>
+                                <span><?php //previous_posts_link(); ?></span>
+                                <span><?php //next_posts_link(); ?></span>
+                                <nav class="pagination">
+                                    <?php pagination_bar(); ?>
+                                </nav>
                                 </ul>
                             </div>
                         <?php endif; ?>

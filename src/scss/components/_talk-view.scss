@@ -28,3 +28,12 @@
     @include rem(max-width, 400px);
     width: 100%;
 }
+
+.talk-post-image {
+    @include rem(margin, 0 0 $vertical-spacing-unit 30px);
+    float: right;
+
+    & ~ p {
+        margin-top: 0;
+    }
+}
