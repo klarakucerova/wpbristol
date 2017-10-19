@@ -166,27 +166,29 @@ function wpbristol_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'wpbristol_scripts' );
 
-// Customize Read more link text
+/**
+ * Customize Read more link text
+ */
 function modify_read_more_link() {
     return '<a class="more-link" href="' . get_permalink() . '">Read more</a>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 
 // 
-function hwl_home_pagesize( $query ) {
-    if ( is_admin() || ! $query->is_main_query() )
-        return;
+// function hwl_home_pagesize( $query ) {
+//     if ( is_admin() || ! $query->is_main_query() )
+//         return;
 
-    if ( is_home() ) {
-        // Display only 1 post for the original blog archive
-        $query->set( 'posts_per_page', 1 );
-        return;
-    }
+//     if ( is_home() ) {
+//         // Display only 1 post for the original blog archive
+//         $query->set( 'posts_per_page', 1 );
+//         return;
+//     }
 
-    if ( is_post_type_archive( 'post' ) ) {
-        // Display 50 posts for a custom post type called 'movie'
-        $query->set( 'posts_per_page', 5 );
-        return;
-    }
-}
-add_action( 'pre_get_posts', 'hwl_home_pagesize', 1 );
+//     if ( is_post_type_archive( 'post' ) ) {
+//         // Display 50 posts for a custom post type called 'movie'
+//         $query->set( 'posts_per_page', 5 );
+//         return;
+//     }
+// }
+// add_action( 'pre_get_posts', 'hwl_home_pagesize', 1 );

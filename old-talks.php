@@ -1,4 +1,4 @@
-<?php /* Template Name: Talks */ ?>
+
 <?php
 /**
  * The template for displaying all pages
@@ -31,7 +31,7 @@ get_header(); ?>
                         <?php $args = array(
                             'post_type'      => 'post',
                             'post_status'    => 'publish',
-                            'posts_per_page' => 5
+                            'posts_per_page' => 10
                             );
                          
                         $talks = new WP_Query( $args ); ?>

@@ -1481,7 +1481,7 @@ em {
 }
 
 .talk-image {
-  background-image: url(images/talk-placeholder.png);
+  background-image: url(images/placeholder.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1662,6 +1662,24 @@ em {
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.pagination {
+  max-width: 46.875rem;
+  margin: 1.25rem auto;
+  text-align: center;
+}
+
+.page-numbers {
+  padding: 0 0.625rem;
+}
+
+.prev {
+  float: left;
+}
+
+.next {
+  float: right;
 }
 
 .hidden {

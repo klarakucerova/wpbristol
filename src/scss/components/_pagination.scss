@@ -1,0 +1,18 @@
+
+.pagination {
+    @include rem(max-width, 750px);
+    @include rem(margin, $vertical-spacing-unit auto);
+    text-align: center;
+}
+
+.page-numbers {
+    @include rem(padding, 0 ($vertical-spacing-unit / 2));
+}
+
+.prev {
+    float: left;
+}
+
+.next {
+    float: right;
+}

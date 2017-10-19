@@ -28,8 +28,8 @@ get_header();  ?>
                                 </div>
                             </div>
                             <?php the_post_navigation( array(
-                                'prev_text'                  => __( 'prev' ),
-                                'next_text'                  => __( 'next' )
+                                'prev_text' => __( '<< previous' ),
+                                'next_text' => __( 'next >>' )
                             ) ); ?>
                         <?php endwhile; ?> 
                     </div><!-- .entry-content -->
