@@ -1,9 +1,12 @@
 
 .nav-wrapper {
     @include rem(height, 50px);
+    align-items: center;
+    display: flex;
+    margin: 0 4%;
 
     @include breakpoint('small') {
-        @include rem(padding, 15px 4%);
+        @include rem(padding, 15px 0);
     }
 }
 
@@ -38,6 +41,7 @@
     }
 
     @include breakpoint('small') {
+        background-color: transparent;
         position: relative;
         height: auto;
         left: 0;

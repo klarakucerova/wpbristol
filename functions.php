@@ -174,21 +174,15 @@ function modify_read_more_link() {
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 
-// 
-// function hwl_home_pagesize( $query ) {
-//     if ( is_admin() || ! $query->is_main_query() )
-//         return;
+/**
+ * Add first post class
+ */
+function post_class_first( $classes ) {
+    global $wp_query;
+    if ( 0 == $wp_query->current_post ) {
+        $classes[] = 'first-post';
+    }
+    return $classes;
+}
+add_filter( 'post_class', 'post_class_first' );
 
-//     if ( is_home() ) {
-//         // Display only 1 post for the original blog archive
-//         $query->set( 'posts_per_page', 1 );
-//         return;
-//     }
-
-//     if ( is_post_type_archive( 'post' ) ) {
-//         // Display 50 posts for a custom post type called 'movie'
-//         $query->set( 'posts_per_page', 5 );
-//         return;
-//     }
-// }
-// add_action( 'pre_get_posts', 'hwl_home_pagesize', 1 );

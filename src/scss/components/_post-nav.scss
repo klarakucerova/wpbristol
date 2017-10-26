@@ -1,7 +1,67 @@
 
-.nav-links {
-    @include rem(margin, $vertical-spacing-unit 0);
+
+.post-navigation {
+    @include clearfix();
+    @include rem(font-size, 12px);
+    @include rem(margin, $vertical-spacing-unit auto);
+    @include rem(max-width, 873px);
     @include rem(padding-left, 70px);
+    text-transform: uppercase;
+}
+
+.talk-post-nav {
+    @include rem(max-width, 760px);
+    padding: 0;
+}
+
+.nav-links {
     display: flex;
     justify-content: space-between;
+}
+
+.nav-previous,
+.nav-next,
+.prev,
+.next {
+    a {
+        color: $turquoise;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+
+        &:before,
+        &:after {
+            @include rem(font-size, 12px);
+            background: no-repeat center/57% url(images/svg/icon-arrow.svg);
+            display: inline-block;
+            height: 1em;
+            width: 1em;
+            vertical-align: middle;
+        }
+    }
+}
+
+.prev,
+.nav-previous {
+    float: left;
+
+    a {
+        &:before {
+            @include rem(margin-right, 5px);
+            content: '';
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.next,
+.nav-next {
+    float: right;
+
+    a {
+        &:after {
+            @include rem(margin-left, 5px);
+            content: '';
+        }
+    }
 }

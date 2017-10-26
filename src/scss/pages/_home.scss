@@ -13,6 +13,11 @@
         flex-basis: 36%;
     }
 
+    img {
+        display: inline-block;
+        width: 49%;
+    }
+
     @include breakpoint('medium') {
         display: flex;
         justify-content: space-between;

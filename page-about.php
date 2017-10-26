@@ -1,4 +1,4 @@
-<?php /* Template Name: About */ ?>
+
 <?php
 /**
  * The template for displaying all pages

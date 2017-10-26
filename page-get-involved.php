@@ -1,4 +1,4 @@
-<?php /* Template Name: Get Involved */ ?>
+
 <?php
 /**
  * The template for displaying all pages
