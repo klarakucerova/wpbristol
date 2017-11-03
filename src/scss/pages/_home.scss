@@ -24,6 +24,14 @@
     }
 }
 
+.home-images {
+    @include rem(padding-left, 24px);
+
+    @include breakpoint('small') {
+        @include rem(padding-left, 50px);
+    }
+}
+
 .sidebar {
     @include rem(padding, $vertical-spacing-unit);
     background-color: $light-grey;

@@ -26,6 +26,23 @@ get_header(); ?>
                         endwhile;
                     ?>
 
+                    <?php 
+                        $image_one = get_field('image_one');
+                        $url_one = $image_one['url'];
+                        $title_one = $image_one['title'];
+
+                        $image_two = get_field('image_two');
+                        $url_two = $image_two['url'];
+                        $title_two = $image_two['title'];
+                    ?>
+
+                    <div class="home-images">
+                        <img src="<?php echo $url_one; ?>" alt="<?php echo $title_one; ?>">
+                        <img src="<?php echo $url_two; ?>" alt="<?php echo $title_two; ?>">
+                    </div>
+
+                    <h2>Next Events</h2>
+
                     <?php require_once 'next-meetup.php'; ?>
                 </section>
 

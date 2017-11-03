@@ -1,0 +1,16 @@
+
+.icon-arrow {
+    align-items: center;
+    display: flex;
+    line-height: 1;
+
+    &:after {
+        @include rem(font-size, 20px);
+        background: no-repeat center/57% url(images/svg/icon-arrow.svg);
+        content: '';
+        display: inline-block;
+        height: 1em;
+        vertical-align: middle;
+        width: 1em;
+    }
+}

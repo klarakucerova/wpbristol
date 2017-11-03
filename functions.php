@@ -186,3 +186,21 @@ function post_class_first( $classes ) {
 }
 add_filter( 'post_class', 'post_class_first' );
 
+/**
+ * Add first post class
+ */
+function create_post_type() {
+  register_post_type( 'wpbristol_organisers',
+    array(
+      'labels' => array(
+        'name' => __( 'Organisers' ),
+        'singular_name' => __( 'Organisers' )
+      ),
+      'supports' => array( 'title', 'editor', 'thumbnail' ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+add_action( 'init', 'create_post_type' );
+

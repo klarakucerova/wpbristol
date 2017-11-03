@@ -50,3 +50,15 @@
     height: 1em;
     width: 1em;
 }
+
+.search-wrapper {
+    @include rem(padding-left, 24px);
+
+    @include breakpoint('small') {
+        @include rem(padding-left, 50px);
+    }
+
+    .search-form {
+        border: 2px solid $light-grey;
+    }
+}

@@ -1,0 +1,95 @@
+
+.organiser-list {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+
+    @include breakpoint(545px) {
+        justify-content: space-between;
+    }
+}
+
+.organiser-overlay {
+    background-color: $white;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.organiser-list {
+    &.active {
+        .organiser-overlay {
+            opacity: .8;
+        }
+
+        .organiser-item {
+            z-index: -1;
+
+            &.active {
+                border-color: $dark-blue;
+                z-index: 10;
+            }
+        }
+    }
+}
+
+.organiser-title {
+    @include rem(margin, $vertical-spacing-unit 0);
+    @include rem(font-size, 18px);
+    font-weight: 600;
+    text-align: center;
+}
+
+.organiser-item {
+    @include rem(padding, $vertical-spacing-unit);
+    @include rem(max-width, 250px);
+    @include rem( min-height, 300px);
+    background-color: $white;
+    border: 1px solid $light-grey;
+    flex-basis: 250px;
+    margin-bottom: 5%;
+    position: relative;
+    text-align: center;
+    transition: border-color .5s ease-in-out;
+
+    p {
+        padding-left: 0;
+    }
+
+    .icon-arrow {
+        @include rem(margin-top, 20px);
+        justify-content: center;
+
+        &:after {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.organiser-name {
+    @include rem(font-size, 16px);
+    @include rem(margin, 15px 0 0);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.organiser-twitter {
+    @include rem(font-size, 14px);
+    color: $turquoise;
+    font-weight: 400;
+}
+
+.organiser-image {
+    @include rem(max-width, 160px);
+    margin: 0 auto;
+
+    img {
+        border-radius: 50%;
+    }
+}

@@ -33,6 +33,16 @@
     }
 }
 
+.about-text {
+    ul {
+        @include rem(padding-left, 24px);
+
+        @include breakpoint('small') {
+            @include rem(padding-left, 50px);
+        }
+    }
+}
+
 .entry-content {
     @include clearfix();
 }
