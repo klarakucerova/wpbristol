@@ -37,7 +37,7 @@
     }
 
     a {
-        color: $dark-blue;
+        color: $secondary-color;
     }
 
     @include breakpoint('small') {
@@ -80,7 +80,7 @@
         &:before {
             @include rem(height, 3px);
             @include rem(bottom, -5px);
-            background: $turquoise;
+            background: $primary-color;
             content: "";
             left: 0;
             position: absolute;

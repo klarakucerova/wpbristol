@@ -9,17 +9,17 @@
 
 get_header(); ?>
 
-    <section id="primary" class="content-area">
+    <section id="primary" class="content-area container">
         <main id="main" class="site-main" role="main">
 
         <?php
         if ( have_posts() ) : ?>
 
             <header class="page-header">
-                <h1 class="page-title"><?php
+                <h2 class="page-title"><?php
                     /* translators: %s: search query. */
                     printf( esc_html__( 'Search Results for: %s', 'custom-theme' ), '<span>' . get_search_query() . '</span>' );
-                ?></h1>
+                ?></h2>
             </header><!-- .page-header -->
 
             <?php

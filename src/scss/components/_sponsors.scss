@@ -1,7 +1,7 @@
 
 .sponsors {
     @include rem(padding, ($vertical-spacing-unit * 2) 4%);
-    background-color: $light-grey;
+    background-color: $background-color;
 }
 
 .sponsors-title {

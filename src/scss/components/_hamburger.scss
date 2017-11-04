@@ -10,7 +10,7 @@
 .nav-icon span {
     @include rem(border-radius, 9px);
     @include rem(height, 2px);
-    background: $dark-blue;
+    background: $secondary-color;
     display: block;
     left: 0;
     position: absolute;

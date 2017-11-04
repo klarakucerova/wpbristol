@@ -34,5 +34,5 @@
 
 .sidebar {
     @include rem(padding, $vertical-spacing-unit);
-    background-color: $light-grey;
+    background-color: $background-color;
 }

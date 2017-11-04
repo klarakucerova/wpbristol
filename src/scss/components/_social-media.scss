@@ -16,7 +16,7 @@
     li {
         @include rem(font-size, 30px);
         @include rem(margin-right, 12px);
-        background-color: $grey;
+        background-color: $border-color;
         height: 1em;
         width: 1em;
         border-radius: 50%;
@@ -30,7 +30,7 @@
         }
 
         &:hover {
-            background-color: darken($grey, 20%);
+            background-color: darken($border-color, 20%);
         }
     }
 
@@ -40,7 +40,7 @@
 
         &:hover {
             background-color: transparent;
-            fill: darken($grey, 20%);
+            fill: darken($border-color, 20%);
         }
     }
 

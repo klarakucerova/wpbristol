@@ -56,6 +56,8 @@ get_header(); ?>
                             </div>
                         <?php endif; ?>
                         <?php wp_reset_postdata(); ?>
+
+                        <div class="about-text"><?php the_field('about_text'); ?></div>
                     </div>
                 </article>
             </div>

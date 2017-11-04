@@ -646,7 +646,7 @@ em {
 
 .container {
   max-width: 60rem;
-  margin: 2.0625rem auto 0;
+  margin: 2.0625rem auto;
   padding: 0 4%;
 }
 
@@ -1478,6 +1478,7 @@ em {
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
+  position: relative;
 }
 
 @media (min-width: 30rem) {
@@ -1485,6 +1486,31 @@ em {
     -ms-flex-direction: row;
     flex-direction: row;
   }
+}
+
+.talk-list .first-post:before, .talk-list .first-post:after {
+  left: -0.9375rem;
+  position: absolute;
+}
+
+.talk-list .first-post:before {
+  padding: 0.5rem 1.25rem;
+  top: 0.9375rem;
+  background-color: #007f7e;
+  color: #fff;
+  content: 'Next Event';
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.talk-list .first-post:after {
+  top: 3.3125rem;
+  content: '';
+  border-style: solid;
+  border-width: 0 15px 15px 0;
+  border-color: transparent #001919 transparent transparent;
+  height: 0;
+  width: 0;
 }
 
 .talk-list .first-post .talk-info {
@@ -1916,6 +1942,21 @@ em {
 
 .search-wrapper .search-form {
   border: 2px solid #f6f6f6;
+}
+
+.search-title {
+  color: #0d3047;
+  font-weight: 300;
+}
+
+.search-summary p {
+  padding-left: 1.5rem;
+}
+
+@media (min-width: 30rem) {
+  .search-summary p {
+    padding-left: 3.125rem;
+  }
 }
 
 .organiser-list {

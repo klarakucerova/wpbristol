@@ -1,13 +1,13 @@
 
 .button {
     @include rem(padding, 7px 40px);
-    border: 2px solid $turquoise;
+    border: 2px solid $primary-color;
     display: inline-block;
     text-align: center;
     transition: all .5s ease-in-out;
 
     &:hover {
-        background-color: $turquoise;
+        background-color: $primary-color;
         color: $white;
     }
 }

@@ -2,7 +2,7 @@
 .getinvolved-wrapper {
     @include rem(margin, 30px 0 50px);
     padding: 4%;
-    border: 1px solid $light-grey;
+    border: 1px solid $background-color;
 
     @include breakpoint('medium') {
         @include rem(padding, ($vertical-spacing-unit * 2));
@@ -75,7 +75,7 @@
     }
 
     &:before {
-        background-color: rgba($turquoise, 0.2);
+        background-color: rgba($primary-color, 0.2);
         border-radius: 50%;
     }
 

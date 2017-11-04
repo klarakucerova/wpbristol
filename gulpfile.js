@@ -4,11 +4,11 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     sassdoc = require('sassdoc'),
     fs = require('fs'),
-    path = require('path'),
     merge = require('merge-stream'),
     runSequence = require('run-sequence'),
     stylelint = require("stylelint"),
-    scssParser = require('postcss-scss');
+    scssParser = require('postcss-scss'),
+    path = require('path');
 
 var PATHS = {
     localhost: '',
@@ -27,6 +27,10 @@ var PATHS = {
     },
     docs: {
         dest: 'docs/scss/'
+    },
+    svgSprite: {
+        src: './images/icons/svgsprite/',
+        dest: './images/icons/svgbuild/'
     }
 }
 
@@ -157,4 +161,21 @@ gulp.task('sassdoc', function () {
     // Return a Promise.
     return gulp.src(PATHS.sass.src + '**/*.scss')
         .pipe(sassdoc(config));
+});
+
+gulp.task('svg-sprite', function() {
+    return gulp.src(PATHS.svgSprite.src + '**/*.svg')
+        .pipe(plugins.svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(plugins.svgstore())
+        .pipe(gulp.dest(PATHS.svgSprite.dest))
 });

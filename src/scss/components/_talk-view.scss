@@ -16,10 +16,10 @@
 }
 
 .talk-post-date {
-    background-color: $light-grey;
+    background-color: $background-color;
 
     &:after {
-        border-left-color: $light-grey;
+        border-left-color: $background-color;
     }
 }
 

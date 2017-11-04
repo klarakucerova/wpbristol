@@ -15,7 +15,7 @@
 
 .container {
     @include rem(max-width, 960px);
-    @include rem(margin, 33px auto 0);
+    @include rem(margin, 33px auto);
     padding: 0 4%;
 }
 

@@ -32,7 +32,7 @@
             z-index: -1;
 
             &.active {
-                border-color: $dark-blue;
+                border-color: $secondary-color;
                 z-index: 10;
             }
         }
@@ -51,7 +51,7 @@
     @include rem(max-width, 250px);
     @include rem( min-height, 300px);
     background-color: $white;
-    border: 1px solid $light-grey;
+    border: 1px solid $background-color;
     flex-basis: 250px;
     margin-bottom: 5%;
     position: relative;
@@ -81,7 +81,7 @@
 
 .organiser-twitter {
     @include rem(font-size, 14px);
-    color: $turquoise;
+    color: $primary-color;
     font-weight: 400;
 }
 
