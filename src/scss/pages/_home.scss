@@ -26,6 +26,7 @@
 
 .home-images {
     @include rem(padding-left, 24px);
+    @include rem(margin-bottom, 50px);
 
     @include breakpoint('small') {
         @include rem(padding-left, 50px);

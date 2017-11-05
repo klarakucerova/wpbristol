@@ -43,12 +43,12 @@
 }
 
 .organiser-item {
-    @include rem(padding, $vertical-spacing-unit);
+    @include rem(flex-basis, 250px);
     @include rem(max-width, 250px);
-    @include rem( min-height, 300px);
+    @include rem(min-height, 300px);
+    @include rem(padding, $vertical-spacing-unit);
     background-color: $white;
     border: 1px solid $background-color;
-    flex-basis: 250px;
     margin-bottom: 5%;
     position: relative;
     text-align: center;

@@ -30,7 +30,7 @@
         }
 
         &:hover {
-            background-color: darken($border-color, 20%);
+            background-color: darken($border-color, 40%);
         }
     }
 
@@ -55,18 +55,19 @@
 }
 
 .social-icon {
-    width: 17px;
-    height: 17px;
+    @include rem(font-size, 17px);
+    height: 1em;
     fill: $white;
+    width: 1em;
 }
 
 .meetup {
+    @include rem(height, 26px);
+    @include rem(width, 65px);
     fill: $border-color;
-    width: 65px;
-    height: 26px;
     transition: fill .5s ease-in-out;
 
     &:hover {
-        fill: darken($border-color, 20%);
+        fill: darken($border-color, 40%);
     }
 }

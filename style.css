@@ -984,6 +984,7 @@ em {
 
 .home-images {
   padding-left: 1.5rem;
+  margin-bottom: 3.125rem;
 }
 
 @media (min-width: 30rem) {
@@ -1257,7 +1258,7 @@ em {
 }
 
 .social-media li:hover {
-  background-color: #7a7a7a;
+  background-color: #474747;
 }
 
 .social-media .icon-meetup {
@@ -1285,20 +1286,21 @@ em {
 }
 
 .social-icon {
-  width: 17px;
-  height: 17px;
+  font-size: 1.0625rem;
+  height: 1em;
   fill: #fff;
+  width: 1em;
 }
 
 .meetup {
+  height: 1.625rem;
+  width: 4.0625rem;
   fill: #adadad;
-  width: 65px;
-  height: 26px;
   transition: fill .5s ease-in-out;
 }
 
 .meetup:hover {
-  fill: #7a7a7a;
+  fill: #474747;
 }
 
 .getinvolved-wrapper {
@@ -1357,7 +1359,6 @@ em {
   -ms-flex-pack: center;
   justify-content: center;
   text-transform: uppercase;
-  transition: background .5s ease-in-out;
 }
 
 .getinvolved-email span {
@@ -1974,13 +1975,13 @@ em {
 }
 
 .organiser-item {
-  padding: 1.25rem;
+  -ms-flex-preferred-size: 15.625rem;
+  flex-basis: 15.625rem;
   max-width: 15.625rem;
   min-height: 18.75rem;
+  padding: 1.25rem;
   background-color: #fff;
   border: 1px solid #f6f6f6;
-  -ms-flex-preferred-size: 250px;
-  flex-basis: 250px;
   margin-bottom: 5%;
   position: relative;
   text-align: center;
