@@ -3,12 +3,8 @@
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
-
-    @include breakpoint(545px) {
-        justify-content: space-between;
-    }
 }
 
 .organiser-overlay {

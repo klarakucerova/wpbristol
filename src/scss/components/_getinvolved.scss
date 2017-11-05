@@ -43,110 +43,27 @@
     text-transform: uppercase;
     transition: background .5s ease-in-out;
 
-    &:after {
-        @include rem(font-size, 30px);
-        @include rem(margin-left, ($vertical-spacing-unit / 2));
-        background: url(images/icons/email-us.svg) no-repeat center center;
-        background-size: 100%;
-        content: '';
-        display: inline-block;
-        height: 1em;
-        width: 1em;
+    span {
+        line-height: 1;
     }
 
     &:hover {
-        &:after {
-            background-image: url(images/icons/email-us-white.svg);
+        .icon-email-us {
+            fill: $white;
         }
     }
 }
 
 .icon-involved {
     @include rem(margin-right, $vertical-spacing-unit);
-    position: relative;
+    @include rem(padding, 12px);
+    background-color: rgba($primary-color, 0.2);
+    border-radius: 50%;
 
-    &:before,
-    &:after {
-        @include rem(font-size, 60px);
-        content: '';
-        display: inline-block;
+    .svg-icon {
+        @include rem(font-size, 36px);
+        fill: $secondary-color;
         height: 1em;
         width: 1em;
-    }
-
-    &:before {
-        background-color: rgba($primary-color, 0.2);
-        border-radius: 50%;
-    }
-
-    &:after {
-        background-repeat: no-repeat;
-        background-position: center center;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-}
-
-.attend {
-    &:after {
-        background-image: url(images/icons/attend.svg);
-        background-size: 45%;
-    }
-}
-
-.talk {
-    &:after {
-        background-image: url(images/icons/talk.svg);
-        background-size: 33%;
-    }
-}
-
-.teach {
-    &:after {
-        background-image: url(images/icons/teach.svg);
-        background-size: 45%;
-    }
-}
-
-.help {
-    &:after {
-        background-image: url(images/icons/help.svg);
-        background-size: 50%;
-    }
-}
-
-.collaborate {
-    &:after {
-        background-image: url(images/icons/collaborate.svg);
-        background-size: 60%;
-    }
-}
-
-.get_connected_online {
-    &:after {
-        background-image: url(images/icons/get_connected_online.svg);
-        background-size: 45%;
-    }
-}
-
-.write {
-    &:after {
-        background-image: url(images/icons/write.svg);
-        background-size: 45%;
-    }
-}
-
-.record {
-    &:after {
-        background-image: url(images/icons/record.svg);
-        background-size: 45%;
-    }
-}
-
-.offer {
-    &:after {
-        background-image: url(images/icons/offer.svg);
-        background-size: 52%;
     }
 }

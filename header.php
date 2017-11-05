@@ -22,12 +22,15 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <div class="accessibly-hidden">
+        <?php echo file_get_contents( get_template_directory_uri() . '/images/icons/svgbuild/svgSprite.svg' ); ?>
+    </div>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'custom-theme' ); ?></a>
 
     <header id="masthead" class="site-header" role="banner">
         <div class="nav-wrapper">
-            <div class="nav-header-logo-wrapper"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/images/svg/logo.svg" class="header-logo" alt="WordPress Bristol People logo"></a></div>
+            <div class="nav-header-logo-wrapper"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.svg" class="header-logo" alt="WordPress Bristol People logo"></a></div>
             <div class="nav-toggle-wrapper">
                 <div for="nav-toggle" class="nav-icon nav-toggle">
                     <span></span>
@@ -53,7 +56,7 @@
             </picture>
             <div class="header-branding">
                 <div class="header-branding-inner">
-                    <div class="header-logo-wrapper"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/images/svg/logo-white.svg" class="header-logo" alt="WordPress Bristol People logo"></a></div>
+                    <div class="header-logo-wrapper"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo-white.svg" class="header-logo" alt="WordPress Bristol People logo"></a></div>
                     <div class="header-branding-text">
                         <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                         <?php $description = get_bloginfo( 'description', 'display' );

@@ -40,7 +40,6 @@
 
         &:hover {
             background-color: transparent;
-            fill: darken($border-color, 20%);
         }
     }
 
@@ -52,5 +51,22 @@
         align-self: flex-end;
         justify-content: flex-end;
         margin-top: 0;
+    }
+}
+
+.social-icon {
+    width: 17px;
+    height: 17px;
+    fill: $white;
+}
+
+.meetup {
+    fill: $border-color;
+    width: 65px;
+    height: 26px;
+    transition: fill .5s ease-in-out;
+
+    &:hover {
+        fill: darken($border-color, 20%);
     }
 }

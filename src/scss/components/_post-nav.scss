@@ -32,7 +32,7 @@
         &:before,
         &:after {
             @include rem(font-size, 12px);
-            background: no-repeat center/57% url(images/svg/icon-arrow.svg);
+            background: no-repeat center/57% url(images/icons/icon-arrow.svg);
             display: inline-block;
             height: 1em;
             width: 1em;

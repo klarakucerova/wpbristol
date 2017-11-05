@@ -566,6 +566,8 @@ embed {
 }
 
 button {
+  background-color: transparent;
+  border: 0;
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1008,21 +1010,32 @@ em {
   color: #fff;
 }
 
-.icon-arrow {
-  -ms-flex-align: center;
-  align-items: center;
-  display: -ms-flexbox;
-  display: flex;
-  line-height: 1;
+.icon-arrow,
+.icon-search {
+  height: 1em;
+  width: 1em;
 }
 
-.icon-arrow:after {
+.svg-icon {
+  transition: fill .5s ease-in-out;
+}
+
+.icon-arrow {
   font-size: 1.25rem;
-  background: no-repeat center/57% url(images/svg/icon-arrow.svg);
-  content: '';
-  display: inline-block;
+  fill: #0d3047;
+  transform: rotate(90deg);
+}
+
+.icon-email-us {
+  height: 1.375rem;
+  width: 1.875rem;
+  margin-left: 0.625rem;
+  fill: #007f7e;
+}
+
+.icon-search {
+  font-size: 1.1875rem;
   height: 1em;
-  vertical-align: middle;
   width: 1em;
 }
 
@@ -1254,7 +1267,6 @@ em {
 
 .social-media .icon-meetup:hover {
   background-color: transparent;
-  fill: #7a7a7a;
 }
 
 .social-media a {
@@ -1270,6 +1282,23 @@ em {
     justify-content: flex-end;
     margin-top: 0;
   }
+}
+
+.social-icon {
+  width: 17px;
+  height: 17px;
+  fill: #fff;
+}
+
+.meetup {
+  fill: #adadad;
+  width: 65px;
+  height: 26px;
+  transition: fill .5s ease-in-out;
+}
+
+.meetup:hover {
+  fill: #7a7a7a;
 }
 
 .getinvolved-wrapper {
@@ -1331,90 +1360,26 @@ em {
   transition: background .5s ease-in-out;
 }
 
-.getinvolved-email:after {
-  font-size: 1.875rem;
-  margin-left: 0.625rem;
-  background: url(images/icons/email-us.svg) no-repeat center center;
-  background-size: 100%;
-  content: '';
-  display: inline-block;
-  height: 1em;
-  width: 1em;
+.getinvolved-email span {
+  line-height: 1;
 }
 
-.getinvolved-email:hover:after {
-  background-image: url(images/icons/email-us-white.svg);
+.getinvolved-email:hover .icon-email-us {
+  fill: #fff;
 }
 
 .icon-involved {
   margin-right: 1.25rem;
-  position: relative;
-}
-
-.icon-involved:before, .icon-involved:after {
-  font-size: 3.75rem;
-  content: '';
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-}
-
-.icon-involved:before {
+  padding: 0.75rem;
   background-color: rgba(0, 127, 126, 0.2);
   border-radius: 50%;
 }
 
-.icon-involved:after {
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.attend:after {
-  background-image: url(images/icons/attend.svg);
-  background-size: 45%;
-}
-
-.talk:after {
-  background-image: url(images/icons/talk.svg);
-  background-size: 33%;
-}
-
-.teach:after {
-  background-image: url(images/icons/teach.svg);
-  background-size: 45%;
-}
-
-.help:after {
-  background-image: url(images/icons/help.svg);
-  background-size: 50%;
-}
-
-.collaborate:after {
-  background-image: url(images/icons/collaborate.svg);
-  background-size: 60%;
-}
-
-.get_connected_online:after {
-  background-image: url(images/icons/get_connected_online.svg);
-  background-size: 45%;
-}
-
-.write:after {
-  background-image: url(images/icons/write.svg);
-  background-size: 45%;
-}
-
-.record:after {
-  background-image: url(images/icons/record.svg);
-  background-size: 45%;
-}
-
-.offer:after {
-  background-image: url(images/icons/offer.svg);
-  background-size: 52%;
+.icon-involved .svg-icon {
+  font-size: 2.25rem;
+  fill: #0d3047;
+  height: 1em;
+  width: 1em;
 }
 
 .meetup-list {
@@ -1842,7 +1807,7 @@ em {
 .next a:before,
 .next a:after {
   font-size: 0.75rem;
-  background: no-repeat center/57% url(images/svg/icon-arrow.svg);
+  background: no-repeat center/57% url(images/icons/icon-arrow.svg);
   display: inline-block;
   height: 1em;
   width: 1em;
@@ -1897,6 +1862,12 @@ em {
 
 .search-form label {
   width: 100%;
+}
+
+.search-form button {
+  padding: 0.3125rem 0.4375rem;
+  background-color: #fff;
+  border-left: 3px solid #f6f6f6;
 }
 
 .search-field,
@@ -1966,16 +1937,9 @@ em {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   position: relative;
-}
-
-@media (min-width: 545px) {
-  .organiser-list {
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
 }
 
 .organiser-overlay {

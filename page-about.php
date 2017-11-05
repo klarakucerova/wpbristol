@@ -49,7 +49,7 @@ get_header(); ?>
                                         <h6 class="organiser-name"><?php the_title(); ?></h6>
                                         <a href="<?php the_field('twitter_link'); ?>" class="organiser-twitter" target="_blank"><?php the_field('twitter'); ?></a>
                                         <div class="organiser-info accordion-content"><?php the_content(); ?></div>
-                                        <div class="icon-arrow accordion-trigger"></div>
+                                        <div class="accordion-trigger"><svg class="svg-icon icon-arrow"><use xlink:href="#icon-arrow" /></svg></div>
                                     </li>
                                     <?php endwhile; ?>
                                 </ul>

@@ -31,7 +31,9 @@ get_header(); ?>
                         <ul class="getinvolved-list">
                             <?php foreach( $fields as $field_name => $field): ?>
                                 <li>
-                                    <div class="icon-involved <?php echo $field['name']; ?>"></div>
+                                    <div class="icon-involved">
+                                        <svg class="svg-icon icon-<?php echo $field['name']; ?>"><use xlink:href="#icon-<?php echo $field['name']; ?>" /></svg>
+                                    </div>
                                     <div>
                                         <h5><?php echo $field['label']; ?></h5>
                                         <span><?php echo $field['value']; ?></span>
@@ -40,7 +42,10 @@ get_header(); ?>
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
-                    <a href=""><div class="button getinvolved-email"><span>Email Us</span></div></a>
+                    <a href=""><div class="button getinvolved-email">
+                        <span>Email Us</span>
+                        <span><svg class="svg-icon icon-email-us"><use xlink:href="#icon-email-us" /></svg></span>
+                    </div></a>
                 </div>
             </div>
 

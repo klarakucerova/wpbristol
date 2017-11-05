@@ -1,16 +1,29 @@
 
-.icon-arrow {
-    align-items: center;
-    display: flex;
-    line-height: 1;
+.icon-arrow,
+.icon-search {
+    height: 1em;
+    width: 1em;
+}
 
-    &:after {
-        @include rem(font-size, 20px);
-        background: no-repeat center/57% url(images/svg/icon-arrow.svg);
-        content: '';
-        display: inline-block;
-        height: 1em;
-        vertical-align: middle;
-        width: 1em;
-    }
+.svg-icon {
+    transition: fill .5s ease-in-out;
+}
+
+.icon-arrow {
+    @include rem(font-size, 20px);
+    fill: $secondary-color;
+    transform: rotate(90deg);
+}
+
+.icon-email-us {
+    @include rem(height, 22px);
+    @include rem(width, 30px);
+    @include rem(margin-left, 10px);
+    fill: $primary-color;
+}
+
+.icon-search {
+    @include rem(font-size, 19px);
+    height: 1em;
+    width: 1em;
 }

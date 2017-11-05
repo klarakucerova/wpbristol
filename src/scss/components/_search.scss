@@ -20,6 +20,12 @@
     label {
         width: 100%;
     }
+
+    button {
+        @include rem(padding, 5px 7px);
+        background-color: $white;
+        border-left: 3px solid $background-color;
+    }
 }
 
 .search-field,
