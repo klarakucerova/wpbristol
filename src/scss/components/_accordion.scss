@@ -13,6 +13,6 @@
     transition: max-height .5s ease-in-out;
 
     &.is-opened {
-        max-height: 400px;
+        @include rem(max-height, 500px);
     }
 }
