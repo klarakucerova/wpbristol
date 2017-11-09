@@ -50,10 +50,21 @@
         </div>
 
         <div class="header-wrapper">
-            <picture>
-                <source srcset="<?php bloginfo('template_url'); ?>/images/header@2x.png" media="(min-width: 770px)">
-                <img src="<?php bloginfo('template_url'); ?>/images/header.png" alt="Bristol WordPress people">
-            </picture>
+            <div class="video-banner-wrapper">
+                <div class="video-banner-underlay">
+                    <picture>
+                        <source srcset="<?php bloginfo('template_url'); ?>/assets/video/header@2x.png" media="(min-width: 770px)">
+                        <img src="<?php bloginfo('template_url'); ?>/assets/video/header.png" alt="Bristol WordPress people">
+                    </picture>
+                </div>
+                <div class="video-banner-container">
+                    <video class="video-banner" loop autoplay muted>
+                        <source src="<?php bloginfo('template_url'); ?>/assets/video/header.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-banner-overlay"></div>
+            </div>
+
             <div class="header-branding">
                 <div class="header-branding-inner">
                     <div class="header-logo-wrapper"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo-white.svg" class="header-logo" alt="WordPress Bristol People logo"></a></div>

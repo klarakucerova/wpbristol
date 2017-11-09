@@ -1,6 +1,12 @@
 
 .header-wrapper {
+    padding-bottom: 38%;
     position: relative;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        padding-bottom: 25%;
+    }
 
     img {
         width: 100%;
@@ -38,7 +44,7 @@
     @include rem(padding, 0 $vertical-spacing-unit);
     @include rem(max-width, 255px);
     align-items: flex-end;
-    background-color: rgba($primary-color, 0.7);
+    background-color: rgba($primary-color, 0.5);
     bottom: -7%;
     color: $white;
     display: flex;

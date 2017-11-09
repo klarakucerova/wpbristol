@@ -19,6 +19,10 @@
     padding: 0 4%;
 }
 
+.container-404 {
+    margin-bottom: 0;
+}
+
 .entry-content {
     p {
         @include rem(padding-left, 24px);
