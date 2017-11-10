@@ -652,10 +652,6 @@ em {
   padding: 0 4%;
 }
 
-.container-404 {
-  margin-bottom: 0;
-}
-
 .entry-content p {
   padding-left: 1.5rem;
 }
@@ -1013,6 +1009,7 @@ em {
 .button {
   padding: 0.4375rem 2.5rem;
   border: 2px solid #007f7e;
+  border-radius: 0;
   display: inline-block;
   text-align: center;
   transition: all .5s ease-in-out;
@@ -2100,6 +2097,77 @@ em {
 
 .video-banner-overlay {
   background: url(assets/video/video-overlay-tile.png);
+}
+
+.container-404 {
+  margin-bottom: 0;
+}
+
+.error-404-text {
+  margin: 1.25rem 0 0;
+  color: #0d3047;
+  display: inline-block;
+  font-weight: 600;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+@media (min-width: 48.125rem) {
+  .error-404-text {
+    margin: 1.25rem 0;
+  }
+}
+
+.error-404-btn {
+  font-size: 0.875rem;
+  margin: 1.25rem auto;
+  color: #007f7e;
+  font-weight: 600;
+  -ms-flex-order: 2;
+  order: 2;
+  text-transform: uppercase;
+}
+
+@media (min-width: 48.125rem) {
+  .error-404-btn {
+    -ms-flex-order: 3;
+    order: 3;
+  }
+}
+
+.error-404-image {
+  max-width: 30.3125rem;
+  margin: 0 auto;
+  -ms-flex-order: 3;
+  order: 3;
+  width: 100%;
+}
+
+@media (min-width: 48.125rem) {
+  .error-404-image {
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
+.error-404-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (min-width: 48.125rem) {
+  .error-404-container {
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
 .hidden {

@@ -1,0 +1,53 @@
+
+.container-404 {
+    margin-bottom: 0;
+}
+
+.error-404-text {
+    @include rem(margin, $vertical-spacing-unit 0 0);
+    color: $secondary-color;
+    display: inline-block;
+    font-weight: 600;
+    order: 1;
+
+    @include breakpoint('medium') {
+        @include rem(margin, $vertical-spacing-unit 0);
+    }
+}
+
+.error-404-btn {
+    @include rem(font-size, 14px);
+    @include rem(margin, $vertical-spacing-unit auto);
+    color: $primary-color;
+    font-weight: 600;
+    order: 2;
+    text-transform: uppercase;
+
+    @include breakpoint('medium') {
+        order: 3;
+    }
+}
+
+.error-404-image {
+    @include rem(max-width, 485px);
+    margin: 0 auto;
+    order: 3;
+    width: 100%;
+
+    @include breakpoint('medium') {
+        order: 2;
+    }
+}
+
+.error-404-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include breakpoint('medium') {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
