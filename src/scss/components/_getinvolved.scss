@@ -55,6 +55,7 @@
 
 .icon-involved {
     @include rem(margin-right, $vertical-spacing-unit);
+    @include rem(min-width, 60px);
     @include rem(padding, 12px);
     background-color: rgba($primary-color, 0.2);
     border-radius: 50%;

@@ -41,7 +41,7 @@ get_header(); ?>
                         <img src="<?php echo $url_two; ?>" alt="<?php echo $title_two; ?>">
                     </div>
 
-                    <h2>Next Meetup</h2>
+                    <h2>Next Meet-up</h2>
 
                     <?php require_once 'next-meetup.php'; ?>
                 </section>

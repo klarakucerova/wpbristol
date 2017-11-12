@@ -11,31 +11,71 @@
     order: 1;
 
     @include breakpoint('medium') {
-        @include rem(margin, $vertical-spacing-unit 0);
+        margin: 0;
     }
 }
 
 .error-404-btn {
-    @include rem(font-size, 14px);
     @include rem(margin, $vertical-spacing-unit auto);
-    color: $primary-color;
-    font-weight: 600;
     order: 2;
-    text-transform: uppercase;
 
     @include breakpoint('medium') {
+        margin: 0;
         order: 3;
     }
 }
 
 .error-404-image {
-    @include rem(max-width, 485px);
-    margin: 0 auto;
+    @include rem(max-width, 450px);
+    @include rem(margin, 35px auto 0);
     order: 3;
+    position: relative;
     width: 100%;
+
+    @include breakpoint('small') {
+        margin: 0 auto;
+    }
 
     @include breakpoint('medium') {
         order: 2;
+    }
+}
+
+.error-404-image-text {
+    @include rem(border-radius, 20px);
+    @include rem(padding, 12px 20px);
+    @include rem(top, -30px);
+    background-color: $white;
+    border: 2px solid $black;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+
+    &:before,
+    &:after {
+        border-style: solid;
+        display: block;
+        content: "";
+        position: absolute;
+        width: 0;
+    }
+
+    &:before {
+        @include rem(border-width, 18px 18px 0 0);
+        @include rem(bottom, -20px);
+        @include rem(left, 45px);
+        border-color: $black transparent;
+    }
+
+    &:after {
+        @include rem(border-width, 15px 15px 0 0);
+        @include rem(bottom, -15px);
+        @include rem(left, 47px);
+        border-color: $white transparent;
+    }
+
+    @include breakpoint('small') {
+        @include rem(top, 19px);
     }
 }
 

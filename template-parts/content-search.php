@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
-        <?php the_title( sprintf( '<h3><a href="%s" class="search-title" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+        <?php the_title( sprintf( '<h5><a href="%s" class="search-title" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h5>' ); ?>
 
         <?php if ( 'post' === get_post_type() ) : ?>
 

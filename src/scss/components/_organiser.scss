@@ -5,33 +5,40 @@
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
-}
 
-.organiser-overlay {
-    background-color: $white;
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: opacity .5s ease-in-out;
-}
-
-.organiser-list {
     &.active {
         .organiser-overlay {
             opacity: .8;
+            z-index: 10;
         }
 
         .organiser-item {
-            z-index: -1;
+            @include breakpoint('small') {
+                z-index: -1;
+            }
 
             &.active {
                 border-color: $secondary-color;
                 z-index: 10;
             }
         }
+    }
+}
+
+.organiser-overlay {
+    display: none;
+
+    @include breakpoint('small') {
+        background-color: $white;
+        display: block;
+        position: fixed;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: opacity .5s ease-in-out;
+        z-index: -1;
     }
 }
 
@@ -49,7 +56,7 @@
     @include rem(padding, $vertical-spacing-unit);
     background-color: $white;
     border: 1px solid $background-color;
-    margin-bottom: 5%;
+    margin-bottom: 5vh;
     position: relative;
     text-align: center;
     transition: border-color .5s ease-in-out;

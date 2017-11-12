@@ -9,11 +9,12 @@
     }
 }
 
-.meetup-date {
+.meetup-list-date {
     @include rem(font-size, 25px);
     @include rem(margin, 4px $vertical-spacing-unit 0 0);
     @include rem(padding, 5px 15px);
     background-color: $white;
+    display: inline-block;
     font-family: $header-font;
     line-height: 1;
     text-transform: uppercase;
@@ -38,7 +39,7 @@
     }
 }
 
-.meetup-link {
+.meetup-list-link {
     a {
         color: $secondary-color;
         font-weight: 400;

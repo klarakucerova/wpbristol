@@ -1,9 +1,9 @@
 
-.talk-wrapper {
+.meetup-listing-wrapper {
 
 }
 
-.talk-list {
+.meetup-listing {
     @include rem(max-width, 760px);
     margin: 0 auto;
 
@@ -55,7 +55,7 @@
     }
 }
 
-.talk-info {
+.meetup-listing-info {
     @include rem(padding, $vertical-spacing-unit);
     border-style: solid;
     border-color: $background-color;
@@ -88,12 +88,12 @@
     }
 }
 
-.talk-header {
+.meetup-listing-header {
     align-items: flex-start;
     display: flex;
 }
 
-.talk-date {
+.meetup-listing-date {
     @include rem(font-size, 30px);
     @include rem(padding-right, ($vertical-spacing-unit / 2));
     color: $primary-color;
@@ -119,7 +119,7 @@
     }
 }
 
-.talk-title {
+.meetup-listing-title {
     @include rem(padding-left, ($vertical-spacing-unit / 2));
     display: inline-block;
     line-height: 1.1;
@@ -139,7 +139,7 @@
     }
 }
 
-.talk-image {
+.meetup-listing-image {
     background-image: url(images/placeholder.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,7 +149,7 @@
     flex: 1;
 }
 
-.talk-text {
+.meetup-listing-text {
     p {
         margin-bottom: 0;
         padding-left: 0;
@@ -160,7 +160,7 @@
     }
 }
 
-.talk-image-inner {
+.meetup-listing-image-inner {
     padding-bottom: 50%;
 
     @include breakpoint('small') {

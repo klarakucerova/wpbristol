@@ -6,8 +6,8 @@
         <ul class="meetup-list">
             <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
                 <li>
-                    <span class="meetup-date"><?php the_field('event_date'); ?></span>
-                    <span class="meetup-link">
+                    <span class="meetup-list-date"><?php the_field('event_date'); ?></span>
+                    <span class="meetup-list-link">
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </span>
                 </li>

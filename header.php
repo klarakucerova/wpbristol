@@ -39,7 +39,7 @@
                     <span></span>
                 </div>
             </div>
-            <nav id="site-navigation" class="navigation" role="navigation">
+            <nav id="site-navigation" class="top-navigation" role="navigation">
                 <?php
                     wp_nav_menu( array(
                         'theme_location' => 'menu-1',
@@ -51,17 +51,27 @@
 
         <div class="header-wrapper">
             <div class="video-banner-wrapper">
-                <div class="video-banner-underlay">
-                    <picture>
-                        <source srcset="<?php bloginfo('template_url'); ?>/assets/video/header@2x.png" media="(min-width: 770px)">
-                        <img src="<?php bloginfo('template_url'); ?>/assets/video/header.png" alt="Bristol WordPress people">
-                    </picture>
-                </div>
-                <div class="video-banner-container">
-                    <video class="video-banner" loop autoplay muted>
-                        <source src="<?php bloginfo('template_url'); ?>/assets/video/header.mp4" type="video/mp4">
-                    </video>
-                </div>
+                <?php if ( is_front_page() ) : ?>
+                    <div class="video-banner-underlay">
+                        <picture>
+                            <source srcset="<?php bloginfo('template_url'); ?>/assets/video/video-img@2x.png" media="(min-width: 770px)">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/video/video-img.png" alt="Bristol WordPress people">
+                        </picture>
+                    </div>
+                    <div class="video-banner-container">
+                        <video class="video-banner" loop autoplay muted>
+                            <source src="<?php bloginfo('template_url'); ?>/assets/video/header.webm" type="video/webm">
+                            <source src="<?php bloginfo('template_url'); ?>/assets/video/header.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                <?php else: ?>
+                    <div class="video-banner-underlay">
+                        <picture class="image-banner">
+                            <source srcset="<?php bloginfo('template_url'); ?>/images/header@2x.png" media="(min-width: 770px)">
+                            <img src="<?php bloginfo('template_url'); ?>/images/header.png" alt="Bristol WordPress people">
+                        </picture>
+                    </div>
+                <?php endif; ?>
                 <div class="video-banner-overlay"></div>
             </div>
 

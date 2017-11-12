@@ -1,5 +1,5 @@
 
-.next-meetup {
+.meetup-next {
     @include clearfix();
     @include rem(margin-bottom, ($vertical-spacing-unit * 2));
     @include rem(padding-left, 24px);
@@ -9,12 +9,12 @@
     }
 }
 
-.next-meetup-header {
+.meetup-next-header {
     align-items: flex-start;
     display: flex;
 }
 
-.next-meetup-title {
+.meetup-next-title {
     @include rem(font-size, 20px);
     color: $secondary-color;
     font-family: $header-font;
@@ -22,11 +22,11 @@
     line-height: 1.1;
 }
 
-.next-meetup-place {
+.meetup-next-place {
     font-style: italic;
 }
 
-.next-meetup-date {
+.meetup-next-date {
     background-color: $background-color;
 
     &:after {
@@ -34,7 +34,7 @@
     }
 }
 
-.next-meetup-link {
+.meetup-next-link {
     width: 100%;
 
     @include breakpoint('medium') {

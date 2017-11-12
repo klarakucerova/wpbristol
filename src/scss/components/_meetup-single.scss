@@ -1,0 +1,49 @@
+
+.meetup-single-title {
+    @include rem(padding-left, $vertical-spacing-unit);
+}
+
+.meetup-single-content {
+    p {
+        padding: 0;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    @include breakpoint('small') {
+        align-items: flex-start;
+        display: flex;
+    }
+}
+
+.meetup-single-date {
+    background-color: $background-color;
+
+    &:after {
+        border-left-color: $background-color;
+    }
+}
+
+.meetup-single-button {
+    @include rem(margin, $vertical-spacing-unit 0);
+    @include rem(max-width, 400px);
+    width: 100%;
+}
+
+.meetup-single-image {
+    @include rem(margin, $vertical-spacing-unit 0);
+
+    & ~ p {
+        margin-top: 0;
+    }
+
+    @include breakpoint('small') {
+        margin-top: 0;
+    }
+
+    @include breakpoint(610px) {
+        @include rem(margin, 0 0 $vertical-spacing-unit 30px);
+        float: right;
+    }
+}

@@ -13,18 +13,18 @@ get_header();  ?>
                     <div class="entry-content">
                         <?php while ( have_posts() ) : the_post(); ?>
 
-                            <h2 class="talk-post-title"><?php the_title(); ?></h2>
-                            <div class="talk-post-content">
-                                <div class="meetup-date talk-post-date"><?php the_field('event_date'); ?></div>
+                            <h2 class="meetup-single-title"><?php the_title(); ?></h2>
+                            <div class="meetup-single-content">
+                                <div class="meetup-list-date meetup-single-date"><?php the_field('event_date'); ?></div>
                                 <div>
                                     <?php if (has_post_thumbnail( $post->ID ) ): ?>
-                                        <div class="talk-post-image">
+                                        <div class="meetup-single-image">
                                             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
                                             <img src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>">
                                         </div>
                                     <?php endif; ?>
                                     <?php the_content(); ?>
-                                    <a href="<?php the_field('event_link'); ?>" class="button talk-post-button">Go to Meetup</a>
+                                    <a href="<?php the_field('event_link'); ?>" class="button meetup-single-button">Go to Meetup</a>
                                 </div>
                             </div>
                             <?php the_post_navigation( array(

@@ -178,16 +178,20 @@ add_filter( 'the_content_more_link', 'modify_read_more_link' );
  * Add first post class
  */
 function post_class_first( $classes ) {
-    global $wp_query;
-    if ( 0 == $wp_query->current_post ) {
-        $classes[] = 'first-post';
+    $paged = get_query_var( 'paged', 0 );
+    if ($paged === 1) {
+        global $wp_query;
+
+        if ( 0 == $wp_query->current_post) {
+            $classes[] = 'first-post';
+        }
     }
     return $classes;
 }
 add_filter( 'post_class', 'post_class_first' );
 
 /**
- * Add first post class
+ * Add new post type Organisers
  */
 function create_post_type() {
   register_post_type( 'wpbristol_organisers',

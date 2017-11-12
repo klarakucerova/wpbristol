@@ -1,12 +1,8 @@
 
-.icon-arrow,
-.icon-search {
-    height: 1em;
-    width: 1em;
-}
-
 .svg-icon {
+    height: 1em;
     transition: fill .5s ease-in-out;
+    width: 1em;
 }
 
 .icon-arrow {
@@ -24,6 +20,16 @@
 
 .icon-search {
     @include rem(font-size, 19px);
-    height: 1em;
-    width: 1em;
+    fill: $secondary-color;
+}
+
+.icon-turn-off {
+    @include rem(font-size, 45px);
+    fill: $secondary-color;
+    opacity: 0.7;
+    transition: opacity .5s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
 }

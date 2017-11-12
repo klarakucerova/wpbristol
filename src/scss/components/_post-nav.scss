@@ -5,7 +5,6 @@
     @include rem(font-size, 12px);
     @include rem(margin, $vertical-spacing-unit auto);
     @include rem(max-width, 873px);
-    @include rem(padding-left, 70px);
     text-transform: uppercase;
 }
 

@@ -36,28 +36,28 @@ get_header(); ?>
                         $wp_query = new WP_Query( $args ); ?>
 
                         <?php if( $wp_query->have_posts() ): ?>
-                            <div class="talk-wrapper">
-                                <ul class="talk-list">
+                            <div class="meetup-listing-wrapper">
+                                <ul class="meetup-listing">
                                     <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
                                     <li <?php post_class(); ?>>
-                                        <div class="talk-image talk-img-<?php global $post; echo $post->post_name; ?>">
+                                        <div class="meetup-listing-image meetup-listing-img-<?php global $post; echo $post->post_name; ?>">
                                             <?php if (has_post_thumbnail( $post->ID ) ): ?>
                                                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 
                                                 <style>
-                                                    .talk-img-<?php global $post; echo $post->post_name; ?> {
+                                                    .meetup-listing-img-<?php global $post; echo $post->post_name; ?> {
                                                         background-image: url('<?php echo $image[0]; ?>');
                                                     }
                                                 </style>
-                                                <div class="talk-image-inner"></div>
+                                                <div class="meetup-listing-image-inner"></div>
                                             <?php else: ?>
-                                                <div class="talk-image-inner"></div>
+                                                <div class="meetup-listing-image-inner"></div>
                                             <?php endif; ?>
                                         </div>
-                                        <div class="talk-info">
-                                            <div class="talk-header">
-                                                <span class="talk-date"><?php the_field('event_date'); ?></span>
-                                                <span class="talk-title">
+                                        <div class="meetup-listing-info">
+                                            <div class="meetup-listing-header">
+                                                <span class="meetup-listing-date"><?php the_field('event_date'); ?></span>
+                                                <span class="meetup-listing-title">
                                                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                                 </span>
                                             </div>
@@ -68,9 +68,9 @@ get_header(); ?>
                                     </li>
                                     <?php endwhile; ?>
                                 </ul>
-                                <div class="post-navigation talk-post-nav">
-                                    <span class="next"><?php next_posts_link('Previous Talks', 0); ?></span>
-                                    <span class="prev"><?php previous_posts_link('Next Talks'); ?></span>
+                                <div class="post-navigation meetup-listing-post-nav">
+                                    <span class="next"><?php next_posts_link('Previous Events', 0); ?></span>
+                                    <span class="prev"><?php previous_posts_link('Next Events'); ?></span>
                                 </div>
                             </div>
                         <?php endif; ?>

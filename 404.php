@@ -16,13 +16,18 @@ get_header(); ?>
                 <div class="entry-content">
                     <section class="error-404 not-found">
                         <header class="page-header">
-                            <h2 class="page-title"><?php esc_html_e( '404 page', 'custom-theme' ); ?></h2>
+                            <h2 class="page-title"><?php esc_html_e( 'Page not found', 'custom-theme' ); ?></h2>
                         </header><!-- .page-header -->
 
                         <div class="page-content error-404-container">
-                            <span class="error-404-text"><?php esc_html_e( 'You look little lost here..', 'custom-theme' ); ?></span>
-                            <img class="error-404-image" src="<?php bloginfo('template_url'); ?>/images/404.gif" alt="Bristol WordPress people">
-                            <button class="error-404-btn button">Take me home</button>
+                            <span class="error-404-text"><?php esc_html_e( 'You look a little lost here..', 'custom-theme' ); ?></span>
+                            <div class="error-404-image">
+                                <img src="<?php bloginfo('template_url'); ?>/images/404.gif" alt="Bristol WordPress people">
+                                <div class="error-404-image-text"><?php esc_html_e( 'Try turning it on and off again!', 'custom-theme' ); ?></div>
+                            </div>
+                            <div class="error-404-btn">
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><svg class="svg-icon icon-turn-off"><use xlink:href="#icon-turn-off" /></svg></a>
+                            </div>
                         </div><!-- .page-content -->
                     </section><!-- .error-404 -->
                 </div>
