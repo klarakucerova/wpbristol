@@ -1,6 +1,6 @@
 
 .meetup-listing-wrapper {
-
+    @include rem(margin-top, 50px);
 }
 
 .meetup-listing {

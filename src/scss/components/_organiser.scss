@@ -66,7 +66,6 @@
     }
 
     .icon-arrow {
-        @include rem(margin-top, 20px);
         justify-content: center;
 
         &:after {
@@ -84,7 +83,9 @@
 
 .organiser-twitter {
     @include rem(font-size, 14px);
+    @include rem(margin-bottom, 20px);
     color: $primary-color;
+    display: inline-block;
     font-weight: 400;
 }
 

@@ -41,15 +41,15 @@ get_header(); ?>
                                 <ul class="organiser-list accordion">
                                     <div class="organiser-overlay accordion-overlay"></div>
                                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                                    <li class="organiser-item">
+                                    <li class="organiser-item accordion-item">
                                         <?php if ( has_post_thumbnail() ) : ?>
-                                            <div class="organiser-image"><?php the_post_thumbnail( 'full' ); ?></div>
+                                            <div class="organiser-image accordion-trigger"><?php the_post_thumbnail( 'full' ); ?></div>
                                         <?php endif; ?>
 
                                         <h6 class="organiser-name"><?php the_title(); ?></h6>
                                         <a href="<?php the_field('twitter_link'); ?>" class="organiser-twitter" target="_blank"><?php the_field('twitter'); ?></a>
                                         <div class="organiser-info accordion-content"><?php the_content(); ?></div>
-                                        <div class="accordion-trigger"><svg class="svg-icon icon-arrow"><use xlink:href="#icon-arrow" /></svg></div>
+                                        <div class="accordion-trigger trigger-icon"><svg class="svg-icon icon-arrow"><use xlink:href="#icon-arrow" /></svg></div>
                                     </li>
                                     <?php endwhile; ?>
                                 </ul>
