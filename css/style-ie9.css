@@ -823,6 +823,18 @@ em {
   width: 100%;
 }
 
+.header-wrapper .site-title {
+  font-size: 1.3125rem;
+  margin-top: 0.625rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 30rem) {
+  .header-wrapper .site-title {
+    font-size: 1.5rem;
+  }
+}
+
 @media (min-width: 30rem) {
   .nav-header-logo-wrapper {
     display: none;
@@ -842,6 +854,7 @@ em {
 
 .header-logo {
   max-width: 2.5rem;
+  width: 100%;
 }
 
 @media (min-width: 30rem) {

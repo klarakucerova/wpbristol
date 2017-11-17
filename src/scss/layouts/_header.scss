@@ -11,6 +11,16 @@
     img {
         width: 100%;
     }
+
+    .site-title {
+        @include rem(font-size, 21px);
+        @include rem(margin-top, 10px);
+        line-height: 1.2;
+
+        @include breakpoint('small') {
+            @include rem(font-size, 24px);
+        }
+    }
 }
 
 .nav-header-logo-wrapper {
@@ -30,6 +40,7 @@
 
 .header-logo {
     @include rem(max-width, 40px);
+    width: 100%;
 
     @include breakpoint('small') {
         @include rem(max-width, 80px);

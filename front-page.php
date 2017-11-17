@@ -41,7 +41,7 @@ get_header(); ?>
                         <img src="<?php echo $url_two; ?>" alt="<?php echo $title_two; ?>">
                     </div>
 
-                    <h2>Next Meet-up</h2>
+                    <h2>Next Meetup</h2>
 
                     <?php require_once 'next-meetup.php'; ?>
                 </section>
@@ -52,14 +52,14 @@ get_header(); ?>
                 <span class="sponsors-title">Proudly sponsored by</span>
                 <div class="sponsor-content">
                     <div class="sponsor">
-                        <a href="https://www.34sp.com/"><img class="sponsor-logo" src="<?php bloginfo('template_url'); ?>/images/34sp.svg" alt="34sp.com"></a>
+                        <a href="https://www.34sp.com/" target="_blank"><img class="sponsor-logo" src="<?php bloginfo('template_url'); ?>/images/34sp.svg" alt="34sp.com"></a>
                         <?php the_field('sponsor_one'); ?>
                         <p>34SP provide excellent WordPress hosting and amazing support. On top of that our members receive a discount code which gives them three months of free hosting, which you can cancel at any time (no getting sucked into a twelve month contract if you don’t want). The code is WPBRUG.</p>
                     </div>
                     <div class="sponsor">
-                        <a href="https://developme.training/"><img class="sponsor-logo" src="<?php bloginfo('template_url'); ?>/images/developme.svg" alt="Developme"></a>
+                        <a href="https://developme.training/" target="_blank"><img class="sponsor-logo" src="<?php bloginfo('template_url'); ?>/images/developme.svg" alt="Developme"></a>
                         <?php the_field('sponsor_two'); ?>
-                        <p>DevelopMe are a Bristol based tech training company. They run a variety of training courses including a 12-week full-time developers bootcamp and day long courses covering topics like WordPress and design skills. Their next Intro to WordPress course is on Sat 25th November at the Paintworks.</p>
+                        <p>Develop Me are a Bristol based tech training company. They run a variety of training courses including a 12-week full-time developers bootcamp and day long courses covering topics like WordPress and design skills. Their next Intro to WordPress course is on Sat 25th November at the Paintworks.</p>
                     </div>
                 </div>
             </div>

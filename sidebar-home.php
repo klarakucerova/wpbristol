@@ -1,6 +1,6 @@
 <aside class="sidebar">
     <div class="search-sidebar"><?php get_search_form(); ?></div>
-    <h3>Our Meet-ups</h3>
+    <h3>Our Meetups</h3>
     <?php $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>13)); ?>
     <?php if ( $wpb_all_query->have_posts() ) : ?>
         <ul class="meetup-list">

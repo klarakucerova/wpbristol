@@ -10,7 +10,7 @@
             </div>
         </div>
         <?php the_content(); ?>
-        <a href="<?php the_field('event_link'); ?>" class="button meetup-next-link">Go to Meetup</a>
+        <a href="<?php the_field('event_link'); ?>" class="button meetup-next-link" target="_blank">Go to Meetup</a>
     <?php endwhile; 
     wp_reset_postdata(); ?>
 </div>
