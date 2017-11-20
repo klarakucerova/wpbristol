@@ -42,7 +42,7 @@ get_header(); ?>
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
-                    <a href="mailto:"><div class="button getinvolved-email">
+                    <a href="mailto:hello@wpbristol.co.uk"><div class="button getinvolved-email">
                         <span>Email Us</span>
                         <span><svg class="svg-icon icon-email-us"><use xlink:href="#icon-email-us" /></svg></span>
                     </div></a>
