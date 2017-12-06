@@ -1,5 +1,9 @@
 
-.footer-wrapper {
+.footer {
+    margin-top: auto;
+}
+
+.footer-inner {
     @include rem(padding, $vertical-spacing-unit  4%);
     background-color: $background-color;
     display: flex;

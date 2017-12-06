@@ -9,10 +9,6 @@
     min-height: 100vh;
 }
 
-.site-content {
-    flex: 1;
-}
-
 .container {
     @include rem(max-width, 960px);
     @include rem(margin, 33px auto);

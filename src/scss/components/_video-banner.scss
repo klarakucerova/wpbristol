@@ -45,8 +45,7 @@
     }
 }
 
-.video-banner,
-.image-banner {
+.video-banner {
     background: transparent;
     height: 100%;
     left: 50%;
@@ -56,6 +55,12 @@
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
     width: auto;
+}
+
+.image-banner {
+    background: transparent;
+    height: 100%;
+    width: 100%;
 }
 
 .video-banner-overlay {

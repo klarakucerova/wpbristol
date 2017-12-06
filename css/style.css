@@ -641,11 +641,6 @@ em {
   min-height: 100vh;
 }
 
-.site-content {
-  -ms-flex: 1;
-  flex: 1;
-}
-
 .container {
   max-width: 60rem;
   margin: 2.0625rem auto;
@@ -935,7 +930,11 @@ em {
   font-weight: 400;
 }
 
-.footer-wrapper {
+.footer {
+  margin-top: auto;
+}
+
+.footer-inner {
   padding: 1.25rem 4%;
   background-color: #f6f6f6;
   display: -ms-flexbox;
@@ -947,7 +946,7 @@ em {
 }
 
 @media (min-width: 48.125rem) {
-  .footer-wrapper {
+  .footer-inner {
     -ms-flex-align: end;
     align-items: flex-end;
     -ms-flex-direction: row;
@@ -2144,8 +2143,7 @@ em {
   }
 }
 
-.video-banner,
-.image-banner {
+.video-banner {
   background: transparent;
   height: 100%;
   left: 50%;
@@ -2155,6 +2153,12 @@ em {
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
   width: auto;
+}
+
+.image-banner {
+  background: transparent;
+  height: 100%;
+  width: 100%;
 }
 
 .video-banner-overlay {

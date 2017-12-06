@@ -24,7 +24,7 @@ get_header();  ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php the_content(); ?>
-                                    <a href="<?php the_field('event_link'); ?>" class="button meetup-single-button">Go to Meetup</a>
+                                    <a href="<?php the_field('event_link'); ?>" class="button meetup-single-button" target="_blank">Go to Meetup</a>
                                 </div>
                             </div>
                             <?php the_post_navigation( array(
