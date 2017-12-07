@@ -1427,6 +1427,10 @@ em {
   display: flex;
 }
 
+.meetup-list .first-post {
+  display: none;
+}
+
 .meetup-list-date {
   font-size: 1.5625rem;
   margin: 0.25rem 1.25rem 0 0;
@@ -1491,12 +1495,16 @@ em {
   }
 }
 
-.meetup-listing .first-post:before, .meetup-listing .first-post:after {
+.meetup-listing .first-post {
+  display: none;
+}
+
+.meetup-listing-next-event:before, .meetup-listing-next-event:after {
   left: -0.9375rem;
   position: absolute;
 }
 
-.meetup-listing .first-post:before {
+.meetup-listing-next-event:before {
   padding: 0.5rem 1.25rem;
   top: 0.9375rem;
   background-color: #007f7e;
@@ -1506,7 +1514,7 @@ em {
   text-transform: uppercase;
 }
 
-.meetup-listing .first-post:after {
+.meetup-listing-next-event:after {
   top: 3.3125rem;
   content: '';
   border-style: solid;
@@ -1516,15 +1524,19 @@ em {
   width: 0;
 }
 
-.meetup-listing .first-post .talk-info {
+.meetup-listing-next-event .meetup-listing-info {
   border-color: #007f7e;
   border-width: 0 2px 2px 2px;
 }
 
 @media (min-width: 30rem) {
-  .meetup-listing .first-post .talk-info {
+  .meetup-listing-next-event .meetup-listing-info {
     border-width: 2px 2px 2px 0;
   }
+}
+
+.meetup-listing-heading {
+  margin: 2.8125rem 0;
 }
 
 .meetup-listing-info {
