@@ -34,6 +34,6 @@
 }
 
 .sponsor-logo {
-    @include rem(max-width, 140px);
-
+    @include rem(max-height, 36px);
+    height: 100%;
 }

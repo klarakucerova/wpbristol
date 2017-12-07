@@ -10,6 +10,7 @@
  */
 
 ?>
+    <?php wp_reset_query(); ?>
 
     </div><!-- #content -->
     <footer id="colophon" class="footer <?php if ( is_front_page() ) : ?>footer-homepage<?php endif; ?>" role="contentinfo">

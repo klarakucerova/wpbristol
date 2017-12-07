@@ -967,7 +967,7 @@ em {
   }
 }
 
-.footer-homepage {
+.footer-homepage .footer-inner {
   background-color: #fff;
 }
 
@@ -1713,6 +1713,8 @@ em {
 }
 
 .meetup-next-link {
+  margin: 1.25rem 0;
+  display: block;
   width: 100%;
 }
 
@@ -1762,7 +1764,8 @@ em {
 }
 
 .sponsor-logo {
-  max-width: 8.75rem;
+  max-height: 2.25rem;
+  height: 100%;
 }
 
 .meetup-single-title {
