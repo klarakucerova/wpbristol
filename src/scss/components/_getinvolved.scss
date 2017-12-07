@@ -34,25 +34,6 @@
     }
 }
 
-.getinvolved-email {
-    @include rem(max-width, 300px);
-    @include rem(margin, 30px auto);
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-
-    span {
-        line-height: 1;
-    }
-
-    &:hover {
-        .icon-email-us {
-            fill: $white;
-        }
-    }
-}
-
 .icon-involved {
     @include rem(margin-right, $vertical-spacing-unit);
     @include rem(min-width, 60px);

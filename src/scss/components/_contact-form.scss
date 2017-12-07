@@ -1,0 +1,104 @@
+
+.contact-form {
+    @include rem(max-width, 600px);
+    @include rem(margin, 30px auto);
+
+    label {
+        @extend %accessible-hide;
+    }
+
+    input,
+    textarea {
+        border: 1px solid $border-color;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    br {
+        display: none;
+    }
+
+    .wpcf7 p {
+        margin: 0;
+    }
+
+    .wpcf7-text,
+    .wpcf7-textarea,
+    .wpcf7-submit {
+        @include rem(padding, 7px 12px);
+    }
+
+    .wpcf7-submit {
+        background-color: transparent;
+        border: 0;
+        color: $primary-color;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .contact-form-submit {
+        .ajax-loader {
+            display:none;
+        }
+    }
+}
+
+.contact-form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include breakpoint('small') {
+        flex-direction: row;
+    }
+}
+
+.contact-form-input {
+    @include rem(margin-bottom, 10px);
+    display: inline-block;
+
+    @include breakpoint('small') {
+        width: 49%;
+    }
+}
+
+.contact-form-submit {
+    @include rem(max-width, 300px);
+    @include rem(margin, 10px auto);
+    border: 2px solid $primary-color;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    transition: all .5s ease-in-out;
+    position: relative;
+
+    span {
+        line-height: 1;
+    }
+
+    .icon-email-us {
+        margin-left: 0;
+        transition: unset;
+    }
+
+    &:hover {
+        background-color: $primary-color;
+
+        .wpcf7-submit {
+            color: $white;
+        }
+
+        .icon-email-us {
+            fill: $white;
+        }
+    }
+}
+
+.contact-form-submit-input {
+    width: 100%;
+}
+
+.contact-form-submit-icon {
+    position: absolute;
+    margin-left: 16%;
+}
