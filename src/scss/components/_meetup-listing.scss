@@ -63,6 +63,11 @@
     @include rem(margin, 45px 0);
 }
 
+.meetup-listing-text {
+    @include rem(margin-top, 20px);
+    @include rem(min-height, 55px);
+}
+
 .meetup-listing-info {
     @include rem(padding, $vertical-spacing-unit);
     border-style: solid;

@@ -1530,6 +1530,11 @@ em {
   margin: 2.8125rem 0;
 }
 
+.meetup-listing-text {
+  margin-top: 1.25rem;
+  min-height: 3.4375rem;
+}
+
 .meetup-listing-info {
   padding: 1.25rem;
   border-style: solid;

@@ -209,3 +209,22 @@ function add_google_analytics() { ?>
 <?php }
 add_action( 'wp_head', 'add_google_analytics', 1 );
 
+function add_admin_instructions( $post ) { 
+    global $post;
+    if ( empty ( $post ) || 'post' !== get_post_type( $GLOBALS['post'] ) )
+        return;
+    ?>
+    <div>
+        <h3>Instructions for adding new Meetup posts:</h3>
+        <div>
+          <ul>
+            <li>Enter Meetup information in the main textarea</li>
+            <li>After more less 75 to maximum 85 caracters insert Read More tag (from toolbar)</li>
+            <li>Use "Heading 5" for talk's headings and Italic font for talk’s author</li>
+            <li>Enter Meetup event date and event link in additional fields below</li>
+            <li>If you are not sure what it should look like, you can always check older posts</li>
+          </ul>
+        </div>
+    </div>
+<?php }
+add_action( 'edit_form_after_title', 'add_admin_instructions' );

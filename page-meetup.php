@@ -62,7 +62,7 @@ get_header(); ?>
                                                         <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                                     </span>
                                                 </div>
-                                                <div class="talk-text">
+                                                <div class="meetup-listing-text">
                                                     <?php the_content(); ?>
                                                 </div>
                                             </div>
@@ -94,7 +94,7 @@ get_header(); ?>
                                                     <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                                 </span>
                                             </div>
-                                            <div class="talk-text">
+                                            <div class="meetup-listing-text">
                                                 <?php the_content(); ?>
                                             </div>
                                         </div>
