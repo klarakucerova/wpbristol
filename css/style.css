@@ -1423,7 +1423,7 @@ em {
 }
 
 .meetup-list-date {
-  font-size: 1.5625rem;
+  font-size: 2.125rem;
   margin: 0.25rem 1.25rem 0 0;
   padding: 0.3125rem 0.9375rem;
   background-color: #fff;
@@ -1435,8 +1435,9 @@ em {
 }
 
 .meetup-list-date span {
-  font-size: 1rem;
+  font-size: 0.75rem;
   display: block;
+  line-height: 1.3;
 }
 
 .meetup-list-date:after {
