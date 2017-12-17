@@ -44,7 +44,7 @@ get_header(); ?>
                     <?php endif; ?>
                     
                     <div class="contact-form">
-                        <p>Drop us an email to <a href="mailto:hello@wpbristol.co.uk">hello@wpbristol.co.uk</a> or fill in the below form:</p>
+                        <p>If you’d like to contact the organisers, please fill in the form below:</p>
                         <?php echo do_shortcode( '[contact-form-7 id="307" title="Contact form 1"]' ); ?>
                     </div>
                 </div>
