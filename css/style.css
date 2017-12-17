@@ -859,6 +859,7 @@ em {
 }
 
 .header-logo {
+  height: 2.5rem;
   max-width: 2.5rem;
   width: 100%;
 }
@@ -866,6 +867,7 @@ em {
 @media (min-width: 30rem) {
   .header-logo {
     max-width: 5rem;
+    height: auto;
   }
 }
 
