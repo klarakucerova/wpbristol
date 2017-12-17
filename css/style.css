@@ -2360,12 +2360,6 @@ em {
   max-width: 18.75rem;
   margin: 0.625rem auto;
   border: 2px solid #007f7e;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
   transition: all .5s ease-in-out;
   position: relative;
 }
@@ -2397,7 +2391,15 @@ em {
 
 .contact-form-submit-icon {
   position: absolute;
-  margin-left: 16%;
+  right: 25%;
+  position: absolute;
+  right: 25%;
+  vertical-align: middle;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .hidden {

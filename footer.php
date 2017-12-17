@@ -22,7 +22,6 @@
             </span>
             <div class="social-media-wrapper">
                 <ul class="social-media">
-                    <li><a href="mailto:hello@wpbristol.co.uk"><svg class="social-icon"><use xlink:href="#icon-email" /></svg></a></li>
                     <li><a href="https://www.facebook.com/WPBristolPeeps/" target="_blank"><svg class="social-icon"><use xlink:href="#icon-facebook" /></svg></a></li>
                     <li><a href="https://twitter.com/WPBristolPeeps" target="_blank"><svg class="social-icon"><use xlink:href="#icon-twitter" /></svg></a></li>
                     <li><a href="https://www.instagram.com/wpbristolpeeps/" target="_blank"><svg class="social-icon"><use xlink:href="#icon-instagram" /></svg></a></li>
